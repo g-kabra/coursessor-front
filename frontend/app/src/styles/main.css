@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    .navbar {
+        background-color: black;
+      }
+      
+    .headerh1 {
+        margin-top: 15rem !important;
+        font-weight: 500 !important;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    .headerh1home {
+        font-weight: 500 !important;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+}
+
+
+  

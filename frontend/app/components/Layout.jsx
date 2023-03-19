@@ -1,68 +1,16 @@
-import Navbar from "../../../../components/Navbar"
-import Head from "next/head"
-import Link from "next/link"
-import Image from "next/image"
-import { useState, useEffect, useRef } from "react";
+import Header from './Header';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import Link from 'next/link';
+import Image from 'next/image';
 
-export default function Home() {
 
-  const [isScrolled, setIsScrolled] = useState(false);
-  const navbarRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const navbarOffset = navbarRef.current?.offsetTop || 0;
-      setIsScrolled(scrollTop > navbarOffset);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+const Layout = ({children, videoSrc, title }) => {
   return (
-    <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="theme-color" content="#121212" />
-        <title>Coursessor Blog - Articole utile despre educație și tehnologie</title>
-        <meta name="language" content="ro" />
-        <meta name="geo.region" content="RO" />
-        <meta name="geo.placename" content="București" />
-        <meta name="robots" content="index, follow" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="description" content="Coursessor Blog este un loc unde găsiți cele mai recente știri și articole despre tehnologie în educație, cu un accent pe dezvoltarea personală și profesională." />
-        <meta name="author" content="Coursessor" />
-        <meta name="date" content="2023-03-14" />
-        <meta name="dateModified" content="2023-03-14" />
-        <meta name="keywords" content="educație, tehnologie, dezvoltare personală, dezvoltare profesională" />
-        <meta name="category" content="educație" />
-        <meta property="og:title" content="Coursessor Blog - Articole utile despre educație și tehnologie" />
-        <meta property="og:description" content="Coursessor Blog este un loc unde găsiți cele mai recente știri și articole despre tehnologie în educație, cu un accent pe dezvoltarea personală și profesională." />
-        <meta property="og:image" content="https://coursessor.s3.eu-central-1.amazonaws.com/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg" />
-        <meta property="og:url" content="https://coursessor.com/ro/blog" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@coursessor" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-      </Head>
-
-
-      <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
+    <div className="flex flex-col min-h-screen">
+            <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
                 <video
-                src="https://coursessor.s3.eu-central-1.amazonaws.com/pexels-tima-miroshnichenko-6549275.mp4"
+                src={videoSrc}
                 autoPlay
                 loop
                 muted
@@ -70,47 +18,13 @@ export default function Home() {
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 />
                 <div className="w-full h-full justify-center items-center backdrop-brightness-75">
+                    <Navbar />
                     <section className="flex items-center justify-center hero w-auto h-4/6">
-                        <h1 className="text-6xl mg:text-4xl  font-satoshi p-5 text-white mt-20">Blog</h1>
+                        <h1 className="text-6xl mg:text-4xl  font-satoshi p-5 text-white">{title}</h1>
                     </section>
                 </div>
-                <Navbar ref={navbarRef} isScrolled={isScrolled} />
         </header>
-   
-
-
-      <section className="card flex flex-wrap flex-col items-center justify-center rounded-lg scroll-smooth animate-fade-in p-5 mg:p-6">
-
-
-            <div className="flex flex-col items-center  border border-gray-200 rounded-lg shadow md:flex-col md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-              <Image
-                src="https://coursessor.s3.eu-central-1.amazonaws.com/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg"
-                alt=""
-                className="object-cover w-full rounded-t-lg h-96 md:h-auto  md:rounded-l-lg"
-                width={800}
-                height={800}
-              />
-              <div className="flex flex-col justify-between p-4 leading-normal">
-                <h5 className="mb-2 text-3xl mg:text-2xl font-satoshi  font-bold tracking-tight text-left  dark:text-white">De la învățat mecanic la gândire critică</h5>
-                <p className="text-2xl mg:text-xl mb-3 font-satoshi font-normal  dark:text-gray-400">Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea critică și imaginația elevilor, la activitatea complexă din zilele noastre.</p>
-              </div>
-            
-
-
-              <Link href={"/ro/blog/de-la-invatat-mecanic-la-gandire-critica"} className=" button flex justify-start w-full ml-6 mb-5  items-center px-2 py-2 text-xl mg:text-lg font-satoshi font-medium text-center rounded-lg focus:ring-4 focus:outline-none">
-                Citeste mai mult
-                <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                </svg>
-
-              </Link>
-            
-         </div>
-       
-
-
-      </section>
-
+      <main className="flex-1">{children}</main>
       <footer className="flex flex-wrap mg:flex-col items-center justify-between 0 mt-5 h-128 mg:h-full">
       <div className="mg:hidden ml-8">
           <div className="flex flex-wrap justify-between space-x-6">
@@ -200,6 +114,9 @@ export default function Home() {
           <p className="copyright dark:text-grayy-200 text-center font-satoshi font-normal mr-5 mg:mr-0">© 2023 Coursessor. Toate drepturile rezervate.</p>
         </div>
       </footer>
-    </>
-  )
-}
+    </div>
+  );
+};
+
+export default Layout;
+

@@ -85,7 +85,7 @@ export default function Page() {
                 />
                 <div className="w-full h-full justify-center items-center backdrop-brightness-75">
                     <section className="flex items-center justify-center hero w-auto h-4/6">
-                        <h1 className="text-6xl mg:text-4xl  font-satoshi p-5 text-white mt-20">De la învățat mecanic la gândire critică</h1>
+                        <h1 className="headerh1 text-6xl mg:text-4xl  font-satoshi p-5 font-normal text-white mt-20">De la învățat mecanic la gândire critică</h1>
                     </section>
                 </div>
                 <Navbar ref={navbarRef} isScrolled={isScrolled} />
