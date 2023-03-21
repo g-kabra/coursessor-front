@@ -3,7 +3,7 @@ provider "google" {
 }
 
 resource "google_cloud_run_service" "default" {
-    name     = "coursessorgcr"
+    name     = "coursessor-frontend-service"
     location = var.region
 
     metadata {
@@ -15,7 +15,7 @@ resource "google_cloud_run_service" "default" {
     template {
       spec {
         containers {
-          image = "europe-central2-docker.pkg.dev/coursessor-380913/coursessor-repo/coursessor-image"
+          image = "europe-west8-docker.pkg.dev/coursessor-380913/coursessor-repo/coursessor-image"
         }
       }
     }
