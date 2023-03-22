@@ -3,11 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import ToggleDarkMode from "./ToggleDarkMode";
 
-const Navbar = forwardRef(({ isScrolled }, ref) => {
+const Navbar = forwardRef(({ isScrolled, showToggleDarkMode = true, isFixed=true }, ref) => {
   return (
     <nav
       ref={ref}
-      className={`navbar flex justify-between fixed top-0 left-0 w-full z-50 ${
+      className={`navbar flex justify-between ${
+        isFixed ? 'fixed top-0 left-0 w-full z-50' : ''
+      } ${
         isScrolled ? 'bg-black' : 'bg-transparent'
       } transition-colors duration-300 ease-in-out`}
     >
@@ -22,7 +24,7 @@ const Navbar = forwardRef(({ isScrolled }, ref) => {
           />
         </div>
       </Link>
-      <ToggleDarkMode />
+      {showToggleDarkMode && <ToggleDarkMode />}
     </nav>
   );
 });

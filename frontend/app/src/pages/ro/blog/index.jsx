@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      const navbarOffset = navbarRef.current?.offsetTop || 0;
+      const navbarOffset = navbarRef.current?.offsetTop || 20;
       setIsScrolled(scrollTop > navbarOffset);
     };
 
