@@ -6,13 +6,22 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      import('scrollreveal').then((ScrollReveal) => {
+        const sr = ScrollReveal.default();
+        sr.reveal('.fade', { duration: 1000 });
+      });
+    }
+  }, []);
+
   const [isScrolled, setIsScrolled] = useState(false);
   const navbarRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      const navbarOffset = navbarRef.current?.offsetTop || 20;
+      const navbarOffset = navbarRef.current?.offsetTop || 55;
       setIsScrolled(scrollTop > navbarOffset);
     };
 
@@ -61,65 +70,97 @@ export default function Home() {
 
 
       <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
-                <video
-                src="https://coursessor.s3.eu-central-1.amazonaws.com/pexels-tima-miroshnichenko-6549275.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                />
-                <div className="w-full h-full justify-center items-center backdrop-brightness-75">
-                    <section className="flex items-center justify-center hero w-auto h-4/6">
-                        <h1 className="headerh1home text-6xl mg:text-4xl  font-satoshi p-5 text-white font-[500] mt-20">Blog</h1>
-                    </section>
-                </div>
-                <Navbar ref={navbarRef} isScrolled={isScrolled} />
-        </header>
-   
+        <video
+          src="https://coursessor.s3.eu-central-1.amazonaws.com/pexels-tima-miroshnichenko-6549275.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div className="w-full h-full justify-center items-center backdrop-brightness-75">
+          <section className="flex items-center justify-center hero w-auto h-4/6">
+            <h1 className="headerh1home text-6xl mg:text-4xl  font-satoshi p-5 text-white font-[500] mt-20">Blog</h1>
+          </section>
+        </div>
+        <Navbar ref={navbarRef} isScrolled={isScrolled} />
+      </header>
+
 
 
       <section className="card flex flex-wrap flex-col items-center justify-center rounded-lg scroll-smooth animate-fade-in p-5 mg:p-6">
 
 
-            <div className="flex flex-col items-center  border border-gray-200 rounded-lg shadow md:flex-col md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-              <Image
-                src="https://coursessor.s3.eu-central-1.amazonaws.com/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg"
-                alt=""
-                className="object-cover w-full rounded-t-lg h-96 md:h-auto  md:rounded-l-lg"
-                width={800}
-                height={800}
-              />
-              <div className="flex flex-col justify-between p-4 leading-normal">
-                <h5 className="mb-2 text-3xl mg:text-2xl font-satoshi  font-bold tracking-tight text-left  dark:text-white">De la învățat mecanic la gândire critică</h5>
-                <p className="text-2xl mg:text-xl mb-3 font-satoshi font-normal  dark:text-gray-400">Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea critică și imaginația elevilor, la activitatea complexă din zilele noastre.</p>
-              </div>
-            
+        <div className="flex flex-col items-center  border border-gray-200 rounded-lg shadow md:flex-col md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <Image
+            src="https://coursessor.s3.eu-central-1.amazonaws.com/3d-render-abstract-background-with-brain-that-surrounded-with-particles-with-twisted-trails-trails-particles-are-symoizing-ideas.jpg"
+            alt=""
+            className="object-cover w-full rounded-t-lg h-96 md:h-auto  md:rounded-l-lg"
+            width={1000}
+            height={1000}
+          />
+          <div className="flex flex-col justify-between p-4 leading-normal">
+            <h5 className="mb-2 text-3xl mg:text-2xl font-satoshi  font-bold tracking-tight text-left  dark:text-white">De la învățat mecanic la gândire critică</h5>
+            <p className="text-2xl mg:text-xl mb-3 font-satoshi font-normal  dark:text-gray-400">Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea critică și imaginația elevilor, la activitatea complexă din zilele noastre.</p>
+          </div>
 
 
-              <Link href={"/ro/blog/de-la-invatat-mecanic-la-gandire-critica"} className=" button flex justify-start w-full ml-6 mb-5  items-center px-2 py-2 text-xl mg:text-lg font-satoshi font-medium text-center rounded-lg focus:ring-4 focus:outline-none">
-                Citeste mai mult
-                <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                </svg>
 
-              </Link>
-            
-         </div>
-       
+          <Link href={"/ro/blog/de-la-invatat-mecanic-la-gandire-critica"} className=" button flex justify-start w-full ml-6 mb-5  items-center px-2 py-2 text-xl mg:text-lg font-satoshi font-medium text-center rounded-lg focus:ring-4 focus:outline-none">
+            Citeste mai mult
+            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+            </svg>
+
+          </Link>
+
+        </div>
+
+
+
+      </section>
+
+      <section className="fade card flex flex-wrap flex-col items-center justify-center rounded-lg scroll-smooth animate-fade-in p-5 mg:p-6">
+
+
+        <div className="flex flex-col items-center  border border-gray-200 rounded-lg shadow md:flex-col md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <Image
+            src="https://coursessor.s3.eu-central-1.amazonaws.com/man-opened-magic-book-with-growing-lights-magic-powder-learning-education-concept.jpg"
+            alt=""
+            className="object-cover w-full rounded-t-lg h-96 md:h-auto  md:rounded-l-lg"
+            width={1000}
+            height={1000}
+          />
+          <div className="flex flex-col justify-between p-4 leading-normal">
+            <h5 className="mb-2 text-3xl mg:text-2xl font-satoshi  font-bold tracking-tight text-left  dark:text-white">Profesorul modern</h5>
+            <p className="text-2xl mg:text-xl mb-3 font-satoshi font-normal  dark:text-gray-400">Relația dintre profesori si elevii lor s-a schimbat atât de mult încât din simplii dascăli profesorii au devenit adevărate modele pentru elevii lor.</p>
+          </div>
+
+
+
+          <Link href={"/ro/blog/profesorul-modern"} className=" button flex justify-start w-full ml-6 mb-5  items-center px-2 py-2 text-xl mg:text-lg font-satoshi font-medium text-center rounded-lg focus:ring-4 focus:outline-none">
+            Citeste mai mult
+            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+            </svg>
+
+          </Link>
+
+        </div>
+
 
 
       </section>
 
       <footer className="flex flex-wrap mg:flex-col items-center justify-between 0 mt-5 h-128 mg:h-full">
-      <div className="mg:hidden ml-8">
+        <div className="mg:hidden ml-8">
           <div className="flex flex-wrap justify-between space-x-6">
 
             <Link className="Twitter icon" href="https://twitter.com/coursessor" ><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.55016 21.7497C16.6045 21.7497 21.5583 14.2465 21.5583 7.74162C21.5583 7.53068 21.5536 7.31505 21.5442 7.10412C22.5079 6.40722 23.3395 5.54401 24 4.55505C23.1025 4.95436 22.1496 5.21514 21.1739 5.32849C22.2013 4.71266 22.9705 3.74523 23.3391 2.60552C22.3726 3.17831 21.3156 3.58237 20.2134 3.80037C19.4708 3.01132 18.489 2.48887 17.4197 2.31381C16.3504 2.13874 15.2532 2.32081 14.2977 2.83185C13.3423 3.3429 12.5818 4.15446 12.1338 5.14107C11.6859 6.12767 11.5754 7.23437 11.8195 8.29005C9.86249 8.19185 7.94794 7.68346 6.19998 6.79785C4.45203 5.91225 2.90969 4.66919 1.67297 3.14927C1.0444 4.233 0.852057 5.5154 1.13503 6.73585C1.418 7.95629 2.15506 9.0232 3.19641 9.71974C2.41463 9.69492 1.64998 9.48444 0.965625 9.10568V9.16662C0.964925 10.3039 1.3581 11.4063 2.07831 12.2865C2.79852 13.1667 3.80132 13.7703 4.91625 13.9947C4.19206 14.1929 3.43198 14.2218 2.69484 14.0791C3.00945 15.0572 3.62157 15.9126 4.44577 16.5261C5.26997 17.1395 6.26512 17.4804 7.29234 17.501C5.54842 18.8709 3.39417 19.6139 1.17656 19.6104C0.783287 19.6098 0.390399 19.5857 0 19.5382C2.25286 20.9835 4.87353 21.7511 7.55016 21.7497Z" fill="#98A2B3" />
             </svg>
             </Link>
-         
+
 
 
             <Link className="Linkedln icon" href="https://www.linkedin.com/company/coursessor">
@@ -135,7 +176,7 @@ export default function Home() {
               </svg>
             </Link>
 
-   
+
 
             <Link className="Facebook icon" href="https://ms-my.facebook.com/coursessor/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_1517_323295)">
@@ -154,8 +195,8 @@ export default function Home() {
 
         <Link href="/ro/blog">
           <div className="logo ml-7 mg:ml-0 mg:mt-8 mg:mb-8">
-          <Image className="logo w-142" src="https://coursessor.s3.eu-central-1.amazonaws.com/A15908_Coursessor_Logo_AP+(1).png" alt="" width={142} height={0}/>
-        </div>
+            <Image className="logo w-142" src="https://coursessor.s3.eu-central-1.amazonaws.com/A15908_Coursessor_Logo_AP+(1).png" alt="" width={142} height={0} />
+          </div>
         </Link>
 
 

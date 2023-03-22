@@ -12,7 +12,7 @@ export default function Chatlect() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      const navbarOffset = navbarRef.current?.offsetTop || 20;
+      const navbarOffset = navbarRef.current?.offsetTop || 55;
       setIsScrolled(scrollTop > navbarOffset);
     };
 
