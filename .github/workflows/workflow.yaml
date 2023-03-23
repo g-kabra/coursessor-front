@@ -11,6 +11,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        path: 'app'
     - name: Change directory to app
       run: cd app
     - name: Install dependencies
