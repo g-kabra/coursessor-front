@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build
 
 on:
   push:
@@ -21,20 +21,3 @@ jobs:
       working-directory: ./app
       run: npm run build
 
-    - name: Download pack
-      run: |
-        curl -sSL https://github.com/buildpacks/pack/releases/latest/download/pack-linux.tgz -o pack-linux.tgz
-        tar -xzf pack-linux.tgz
-
-    - name: Move pack binary to system path
-      run: sudo mv pack /usr/local/bin/pack
-
-    - name: Build Docker Image
-      uses: docker/build-push-action@v2
-      with:
-        context: ./
-        push: false
-        file: ./Dockerfile
-        buildargs: |
-          APP_DIRECTORY=app
-        tags: coursessor-image
