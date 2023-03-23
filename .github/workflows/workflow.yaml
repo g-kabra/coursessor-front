@@ -12,7 +12,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        path: 'app'
+        path: '/'
     - name: Change directory to app
       run: cd app
     - name: Install dependencies
