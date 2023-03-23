@@ -11,7 +11,6 @@ env:
   IMAGE_NAME: coursessor-image
   IMAGE_TAG: latest
   LOCATION: europe-west8
-  SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_CREDENTIALS }}
 
 jobs:
   build:
