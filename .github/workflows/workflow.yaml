@@ -30,7 +30,7 @@ jobs:
       id: gcloud
 
     - name: Configure Docker
-      uses: docker/setup-docker@v1
+      uses: actions/setup-docker@v2
 
     - name: Build and push Docker image
       env:
