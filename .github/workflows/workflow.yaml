@@ -16,6 +16,6 @@ jobs:
     - name: Change directory to app
       run: cd app
     - name: Install dependencies
-      run: npm install --prefix app
+      run: npm install
     - name: Build
       run: npm run build
