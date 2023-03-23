@@ -12,10 +12,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        path: '/app'
+        path: 'app'
     - name: Change directory to app
       run: cd app
     - name: Install dependencies
-      run: npm install
+      run: npm install app
     - name: Build
       run: npm run build
