@@ -12,6 +12,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Install dependencies
-      run: npm install --prefix /frontend/app
+      run: npm install --prefix frontend/app
     - name: Build
       run: npm run build
