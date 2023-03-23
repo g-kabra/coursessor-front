@@ -2,15 +2,11 @@ name: Build and Deploy to Cloud Run
 
 on:
   push:
-    branches: [main]
-
-env:
-  PROJECT_ID: coursessor-380913
-  REGION: europe-west8
-  IMAGE_NAME: coursessor-image
+    branches:
+      - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,42 +21,39 @@ jobs:
       working-directory: ./app
       run: npm run build
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Setup gcloud CLI
-      uses: google-github-actions/setup-gcloud@v2
+    - name: Set up Google Cloud SDK
+      uses: google-github-actions/setup-gcloud@v1
       with:
+        version: '344.0.0'
+        project_id: coursessor-380913
         service_account_key: ${{ secrets.GCP_CREDENTIALS }}
-        project_id: ${{ env.PROJECT_ID }}
-        export_default_credentials: true
+      id: gcloud
+
+    - name: Configure Docker
+      uses: docker/setup-docker@v1
 
     - name: Build and push Docker image
       env:
-        GOOGLE_APPLICATION_CREDENTIALS: /secrets/gcp-credentials.json
-        GOOGLE_CLOUD_PROJECT: ${{ env.PROJECT_ID }}
-        GOOGLE_REGION: ${{ env.REGION }}
-        PORT: 8080
+        PROJECT_ID: coursessor-380913
+        IMAGE_NAME: coursessor-image
+        TAG_NAME: ${{ github.sha }}
       run: |
-        docker build \
-          --tag gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
-          --build-arg NODE_ENV=production \
-          --build-arg PORT=${{ env.PORT }} \
-          --build-arg APP_DIRECTORY=app \
-          .
+        echo ${{ secrets.GCP_CREDENTIALS }} > key.json
+        gcloud auth activate-service-account --key-file=key.json
+        docker build -t gcr.io/$PROJECT_ID/$IMAGE_NAME:$TAG_NAME ./app
+        docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:$TAG_NAME
 
-        docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+    - name: Logout of Docker
+      run: docker logout
 
-    - name: Deploy to Cloud Run
-      uses: GoogleCloudPlatform/github-actions/cloud-run@master
+    - name: Update Cloud Run service
+      uses: google-github-actions/deploy-cloudrun@v0.2.0
       with:
-        image: gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-        service_name: ${{ env.IMAGE_NAME }}
-        region: ${{ env.REGION }}
-        project_id: ${{ env.PROJECT_ID }}
-        allow_unauthenticated: true
+        image: gcr.io/coursessor-380913/coursessor-image:${{ github.sha }}
+        service: coursessor-frontend-service-europe
+        region: europe-west8
+        platform: managed
+        allow-unauthenticated: true
+        service-account: ${{ env.SERVICE_ACCOUNT }}
+        project_id: ${{ secrets.PROJECT_ID }}
+        credentials: ${{ secrets.GCP_CREDENTIALS }}
