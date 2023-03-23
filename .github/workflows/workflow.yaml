@@ -8,10 +8,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install dependencies
+
+    - name: Install Dependencies
+      working-directory: ./app
       run: npm install
-    - name: Build
+
+    - name: Build Application
+      working-directory: ./app
       run: npm run build
