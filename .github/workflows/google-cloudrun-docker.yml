@@ -21,11 +21,12 @@ jobs:
     - name: Install Pack CLI
       run: |
         curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.29.0-rc1/pack-v0.29.0-rc1-linux.tgz" | sudo tar -C /usr/local/bin/ --no-same-owner -xzv pack
-    - name: Authenticate with Google Cloud
-      run: |
-        echo '${{ env.SERVICE_ACCOUNT_KEY }}' | base64 --decode > "$HOME"/gcp.json
-        gcloud auth activate-service-account --key-file="$HOME"/gcp.json
-        gcloud auth configure-docker --quiet
+      - name: Google Auth
+        id: auth
+        uses: 'google-github-actions/auth@v0'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
     - name: Build and push Docker image using Cloud Native Buildpacks
       run: |
         pack build gcr.io/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder \
