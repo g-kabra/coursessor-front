@@ -8,6 +8,7 @@ on:
 
 env:
   PROJECT_ID: coursessor-380913
+  REPO_NAME: coursessor-repo
   IMAGE_NAME: coursessor-image
   IMAGE_TAG: latest
   LOCATION: europe-west8
@@ -34,7 +35,7 @@ jobs:
         credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
         
     - name: Configure docker for GCP
-      run: gcloud auth configure-docker $LOCATION-docker.pkg.dev --quiet
+      run: gcloud auth configure-docker $LOCATION-docker.pkg.dev --quiet 
       
     - name: Park CLI setup
       id: setup-pack
@@ -42,8 +43,9 @@ jobs:
       
     - name: Build and push Docker image using Cloud Native Buildpacks
       run: |
-        pack build $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder
-        docker push $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
+        gcr.io/coursessor-380913/github.com/coursessor/coursessor
+        pack build $LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder
+        docker push $LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$IMAGE_NAME:$IMAGE_TAG
         
     - id: "deploy"
       uses: "google-github-actions/deploy-cloudrun@v1"
