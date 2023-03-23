@@ -11,6 +11,7 @@ env:
   IMAGE_NAME: coursessor-image
   IMAGE_TAG: latest
   LOCATION: europe-west8
+  SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_CREDENTIALS }}
 
 jobs:
   build:
@@ -20,9 +21,14 @@ jobs:
     - name: Install Pack CLI
       run: |
         curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.29.0-rc1/pack-v0.29.0-rc1-linux.tgz" | sudo tar -C /usr/local/bin/ --no-same-owner -xzv pack
+    - name: Authenticate with Google Cloud
+      run: |
+        echo "${{ env.SERVICE_ACCOUNT_KEY }}" | base64 --decode > "$HOME"/gcp.json
+        gcloud auth activate-service-account --key-file="$HOME"/gcp.json
+        gcloud auth configure-docker --quiet
     - name: Build and push Docker image using Cloud Native Buildpacks
       run: |
         pack build gcr.io/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder \
         --path . --publish
-        docker tag $IMAGE_NAME $LOCATION-docker.pkg.dev/$PROJECT-ID/$REPOSITORY/$IMAGE_NAME
-        docker push docker push $LOCATION-docker.pkg.dev/$PROJECT-ID/$REPOSITORY/$IMAGE_NAME
+        docker tag $IMAGE_NAME $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
+        docker push $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
