@@ -20,3 +20,13 @@ jobs:
     - name: Build Application
       working-directory: ./app
       run: npm run build
+
+    - name: Build Docker Image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./
+        push: false
+        file: ./Dockerfile
+        buildargs: |
+          APP_DIRECTORY=app
+        tags: coursessor-image
