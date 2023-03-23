@@ -11,6 +11,7 @@ env:
   IMAGE_NAME: coursessor-image
   IMAGE_TAG: latest
   LOCATION: europe-west8
+  SERVICE: coursessor-frontend-service-europe
 
 permissions:
   contents: "read"
@@ -23,20 +24,34 @@ jobs:
         working-directory: app
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+    
     - name: Authenticate with Google Cloud
       id: "auth"
       uses: "google-github-actions/auth@v1"
       with:
         credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
+        
     - name: Configure docker for GCP
-      run: gcloud auth configure-docker --quiet
-    - name: Install Pack CLI
-      run: |
-        curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.29.0-rc1/pack-v0.29.0-rc1-linux.tgz" | sudo tar -C /usr/local/bin/ --no-same-owner -xzv pack
+      run: gcloud auth configure-docker $LOCATION-docker.pkg.dev --quiet
+      
+    - name: Park CLI setup
+      id: setup-pack
+      uses: buildpacks/github-actions/setup-pack@v5.0.0
+      
     - name: Build and push Docker image using Cloud Native Buildpacks
       run: |
-        pack build gcr.io/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder \
-        --path . --publish
+        pack build gcr.io/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder
         docker tag $IMAGE_NAME $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
         docker push $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
+        
+    - id: "deploy"
+      uses: "google-github-actions/deploy-cloudrun@v1"
+      with:
+        service: ${{ env.SERVICE }}
+        image: "gcr.io/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG"
+
+    - name: "Use output"
+      run: 'curl "${{ steps.deploy.outputs.url }}"'
+
