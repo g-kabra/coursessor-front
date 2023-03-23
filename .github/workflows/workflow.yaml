@@ -11,7 +11,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - name: Change directory to app
+      run: cd app
     - name: Install dependencies
-      run: npm install app
+      run: npm install
     - name: Build
       run: npm run build
