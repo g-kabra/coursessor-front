@@ -61,7 +61,7 @@ jobs:
       with:
         service: ${{ env.SERVICE }}
         image: "${{ env.LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO_NAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
-
+        region: ${{ env.LOCATION }}
     - name: "Use output"
       run: 'curl "${{ steps.deploy.outputs.url }}"'
 
