@@ -1,9 +1,13 @@
-name: Build
+name: Build and Deploy to Cloud Run
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+
+env:
+  PROJECT_ID: coursessor-380913
+  REGION: europe-west8
+  IMAGE_NAME: coursessor-image
 
 jobs:
   build:
@@ -21,3 +25,49 @@ jobs:
       working-directory: ./app
       run: npm run build
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Pack
+      run: |
+        curl -sSL https://github.com/buildpacks/pack/releases/latest/download/pack-linux.tgz -o pack.tgz
+        sudo tar xzvf pack.tgz -C /usr/local/bin/
+
+    - name: Authenticate with GCR
+      uses: docker/login-action@v1
+      with:
+        registry: gcr.io
+        username: _json_key
+        password: ${{ secrets.GCP_CREDENTIALS }}
+
+    - name: Build and push Docker image
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: /secrets/gcp-credentials.json
+        GOOGLE_CLOUD_PROJECT: ${{ env.PROJECT_ID }}
+        GOOGLE_REGION: ${{ env.REGION }}
+        PORT: 8080
+      run: |
+        pack build \
+          --builder=gcr.io/buildpacks/community.builder:v1.0 \
+          --publish gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE_NAME }} \
+          --path=app \
+          --env GOOGLE_APPLICATION_CREDENTIALS=/secrets/gcp-credentials.json \
+          --env GOOGLE_CLOUD_PROJECT=${{ env.PROJECT_ID }} \
+          --env GOOGLE_REGION=${{ env.REGION }} \
+          --env PORT=${{ env.PORT }} \
+          --volume ${{ github.workspace }}/secrets:/secrets \
+          --cache
+
+    - name: Deploy to Cloud Run
+      uses: GoogleCloudPlatform/github-actions/cloud-run@master
+      with:
+        image: gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE_NAME }}
+        service_name: ${{ env.IMAGE_NAME }}
+        region: ${{ env.REGION }}
+        project_id: ${{ env.PROJECT_ID }}
+        allow_unauthenticated: true
