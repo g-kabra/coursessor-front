@@ -42,8 +42,7 @@ jobs:
       
     - name: Build and push Docker image using Cloud Native Buildpacks
       run: |
-        pack build gcr.io/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder
-        docker tag $IMAGE_NAME $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
+        pack build $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG --builder gcr.io/buildpacks/builder
         docker push $LOCATION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
         
     - id: "deploy"
