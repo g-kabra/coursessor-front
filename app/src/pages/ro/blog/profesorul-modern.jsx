@@ -76,7 +76,7 @@ export default function Page() {
 
             <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
                 <video
-                    src="https://coursessor.s3.eu-central-1.amazonaws.com/pexels-tima-miroshnichenko-6550419.mp4"
+                    src="https://coursessor.s3.eu-central-1.amazonaws.com/pexels-marina-zasorina-7601710.mp4"
                     autoPlay
                     loop
                     muted
