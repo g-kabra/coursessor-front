@@ -1,15 +1,18 @@
 steps:
   # Install dependencies
   - name: node
+    dir: app/
     entrypoint: npm
     args: ["install"]
 
   - name: node
+    dir: app/
     entrypoint: npm
     args: ["run", "build"]
 
   # Setup resources for system tests
   - id: "Build Container Image"
+    dir: app/
     name: "gcr.io/k8s-skaffold/pack"
     entrypoint: pack
     args:
