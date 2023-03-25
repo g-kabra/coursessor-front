@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/ro/blog',
+        permanent: false,
+      },
+    ]
+  },
   reactStrictMode: true,
   compress: true,
   output: 'standalone',
