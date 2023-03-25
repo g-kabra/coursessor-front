@@ -1,0 +1,37 @@
+steps:
+  # Install dependencies
+  - name: node
+    dir: app/
+    entrypoint: npm
+    args: ["install"]
+  # Create Build
+  - name: node
+    dir: app/
+    entrypoint: npm
+    args: ["run", "build"]
+
+  # Setup resources for system tests
+  - id: "Build Container Image"
+    dir: app/
+    name: "gcr.io/k8s-skaffold/pack"
+    entrypoint: pack
+    args:
+      - build
+      - "--builder=gcr.io/buildpacks/builder"
+      - "gcr.io/coursessor-380913/github.com/coursessor/coursessor:$COMMIT_SHA"
+
+  - id: "Push Container Image"
+    name: "gcr.io/cloud-builders/docker:latest"
+    args:
+      - push
+      - "gcr.io/coursessor-380913/github.com/coursessor/coursessor:$COMMIT_SHA"
+
+  - id: "Deploy to Cloud Run"
+    name: "gcr.io/cloud-builders/gcloud:latest"
+    entrypoint: /bin/bash
+    args:
+      - "-c"
+      - |
+        gcloud run deploy coursessor-frontend-service-europe \
+          --image gcr.io/coursessor-380913/github.com/coursessor/coursessor:$COMMIT_SHA \
+          --region europe-west8
