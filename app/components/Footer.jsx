@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const Footer = () => {
+
+export default function Footer() {
 
     return (
 
-        <>
+
 
             <footer className="flex flex-wrap mg:flex-col items-center justify-between 0 mt-5 h-128 mg:h-full">
                 <div className="mg:hidden ml-8">
@@ -93,14 +94,9 @@ const Footer = () => {
                 </div>
 
                 <div className="copyright mg:mb-8 mg:mt-5">
-                    <p className="copyright dark:text-grayy-200 font-satoshi font-normal mg:mr-0">© 2023 Coursessor. Toate drepturile rezervate.</p>
+                    <p className="copyright dark:text-grayy-200 text-center font-satoshi font-normal mr-5 mg:mr-0">© 2023 Coursessor. Toate drepturile rezervate.</p>
                 </div>
             </footer>
-
-        </>
+    
     )
 }
-
-export default Footer;
-
-

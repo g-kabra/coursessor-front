@@ -44,7 +44,18 @@ video::-webkit-media-controls-start-playback-button {
     .backdrop{
         width: full !important;
     }
-}
+
+    /* Blog card section styles */
+
+    .card {
+      @apply mx-10 mt-14 mg:mx-5
+    }
+
+    .title {
+      @apply mb-3
+    }
+  }
+
 
 
   

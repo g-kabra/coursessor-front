@@ -87,7 +87,7 @@ export default function Page() {
                 />
                 <div className="w-full h-full justify-center items-center backdrop-brightness-75">
                     <section className="flex items-center justify-start hero w-auto h-4/6">
-                        <h1 className="headerh1 text-6xl mg:text-4xl  font-satoshi p-5 font-normal text-white mt-20">De la învățat mecanic la gândire critică</h1>
+                        <h1 className="headerh1 text-6xl mg:text-4xl  font-satoshi p-5 font-normal text-white mt-20">Educația si importanța ei</h1>
                     </section>
                 </div>
                 <Navbar ref={navbarRef} isScrolled={isScrolled} />
@@ -98,19 +98,19 @@ export default function Page() {
 
             <div className="content flex flex-col p-5 mt-5">
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight">
-                    Educația este un domeniu care a suferit schimbări semnificative de-a lungul timpului. În trecut, educația se baza pe memorarea mecanică a informațiilor, iar gândirea critică și creativitatea erau efectiv ignorate. Cu toate acestea, în prezent, educația încorporează o serie de practici pedagogice care țin cont de nevoile și abilitățile tuturor elevilor. Una dintre cele mai semnificative schimbări este adoptarea tehnologiei ca resursă de învățare.
+                Educația reprezintă un aspect crucial al vieții noastre. Este procesul de dobândire a cunoștințelor, abilităților, valorilor și atitudinilor necesare pentru creșterea, dezvoltarea și succesul personal. Educația nu se limitează la sala de clasă, ci cuprinde toate aspectele vieții.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                    Utilizarea calculatoarelor, a platformelor de învățare online și a realității virtuale le-a permis studenților să învețe de oriunde și în orice moment. Platformele de învățare online au fost dezvoltate pentru a oferi o experiență de învățare personalizată. Un alt aspect crucial al educației moderne este conștientizarea faptului că elevii provin din medii sociale diferite. Profesorii recunosc acum nevoia de a-și adapta modul de predare la stilurile diferite de învățare ale elevilor și la statutul socio-economic al acestora.
+                Ea ne echipează cu abilități de gândire critică, abilități de rezolvare a problemelor și capacitatea de a lua decizii informate. Educația este esențială pentru o carieră de succes și o viață împlinită.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                    Unele școli au introdus programe de studii culturale menite să dezvolte empatia elevilor și respectul acestora pentru societatea multiculturală în care trăiesc. Educația a recunoscut, de asemenea, importanța predării gândirii critice și a abilităților de rezolvare a problemelor. În loc să se concentreze doar pe memorarea mecanică, studenții sunt încurajați să dezvolte abilități de analiză, sinteză și evaluare.
+                Educația este, de asemenea, un drept fundamental al omului. Toată lumea ar trebui să aibă acces la o educație de calitate. Educația este esențială pentru reducerea sărăciei, promovarea dezvoltării durabile și obținerea unei calități mai bune a vieții.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10">
-                    Gândirea critică îi ajută pe elevi să abordeze problemele în mod logic, să-și formeze propriile opinii și să ia decizii informate.
+                În lumea de astăzi, educația a devenit mai importantă ca niciodată. Abilitățile necesare pentru a reuși la locul de muncă evoluează constant, iar educația joacă un rol esențial în dobândirea acestora.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10">
-                    În concluzie, educația modernă se caracterizează prin utilizarea tehnologiei, dezvoltarea unei abordări incluzive și prin faptul că accentul este pus pe gândirea critică și abilitățile de rezolvare a problemelor. Aceste schimbări urmăresc să abordeze natura dinamică a lumii în care trăim și să le confere elevilor setul de abilități necesare pentru a reuși în societatea de astăzi. Viitorul educației pare promițător, deoarece continuă să evolueze și să se adapteze la nevoile în schimbare ale elevilor.
+                În concluzie, educația este o parte esențială a vieții noastre. Ne oferă cunoștințele și abilitățile necesare pentru succesul profesional. Educația este un drept al omului care ar trebui să fie accesibil tuturor și este crucială pentru a crea un viitor mai bun pentru noi înșine și pentru generațiile viitoare.
                 </p>
 
             </div>
@@ -127,4 +127,5 @@ export default function Page() {
 
     )
 }
+
 

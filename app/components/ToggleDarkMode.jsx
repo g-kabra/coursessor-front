@@ -16,7 +16,7 @@ export default function ToggleDarkMode() {
   if (!mounted) return null;
 
   return (
-    <button role={"switchToDark"}
+    <button role="switch" aria-checked="true"
       onClick={() => handleThemeChange(theme === 'dark' ? 'light' : 'dark')}
       className="flex items-center justify-center rounded-full p-4 transition-colors duration-300 focus:outline-none mr-3 mt-1"
     >
