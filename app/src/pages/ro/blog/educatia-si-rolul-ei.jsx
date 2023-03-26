@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 import dynamic from "next/dynamic";
 import Footer from "../../../../components/Footer";
-
+import GTag from "../../../../components/gtag";
 
 
 export default function Page() {
@@ -42,6 +42,7 @@ export default function Page() {
     return (
         <>
             <Head>
+                <GTag measurementId="G-GWMRVJ2DK8" />
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -95,24 +96,24 @@ export default function Page() {
 
             <div className="content flex flex-col p-5 mt-5">
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight">
-                Educația este procesul de dobândire a cunoștințelor, abilităților, valorilor, credințelor și obiceiurilor in diferite moduri , cum ar fi școlarizarea formală sau  învățarea informală  .Educația joacă un rol vital în modelarea viitorului indivizilor și al societății în ansamblu. Este  baza creșterii personale și profesionale, mobilității sociale și dezvoltării economice.
+                    Educația este procesul de dobândire a cunoștințelor, abilităților, valorilor, credințelor și obiceiurilor in diferite moduri , cum ar fi școlarizarea formală sau  învățarea informală  .Educația joacă un rol vital în modelarea viitorului indivizilor și al societății în ansamblu. Este  baza creșterii personale și profesionale, mobilității sociale și dezvoltării economice.
 
 
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Educația formală, oferită de obicei de școli și universități, este mijlocul principal de educare a unui număr mare de oameni. Oferă un mediu de învățare structurat și standardizat care permite indivizilor să dobândească cunoștințe și abilități într-o serie de discipline, inclusiv matematică, știință, limbă și istorie. Educația formală insuflă, de asemenea, valori precum disciplina, responsabilitatea și munca în echipă, care sunt esențiale pentru succesul în viață.
-Educația informală, cum ar fi învățarea de la familie, prieteni și membri ai comunității, poate juca, de asemenea, un rol semnificativ în modelarea convingerilor, atitudinilor și comportamentelor indivizilor. Studiul de sine, prin lectură, cercetare și alte mijloace, poate fi, de asemenea, un instrument puternic pentru dezvoltarea personală și profesională.
+                    Educația formală, oferită de obicei de școli și universități, este mijlocul principal de educare a unui număr mare de oameni. Oferă un mediu de învățare structurat și standardizat care permite indivizilor să dobândească cunoștințe și abilități într-o serie de discipline, inclusiv matematică, știință, limbă și istorie. Educația formală insuflă, de asemenea, valori precum disciplina, responsabilitatea și munca în echipă, care sunt esențiale pentru succesul în viață.
+                    Educația informală, cum ar fi învățarea de la familie, prieteni și membri ai comunității, poate juca, de asemenea, un rol semnificativ în modelarea convingerilor, atitudinilor și comportamentelor indivizilor. Studiul de sine, prin lectură, cercetare și alte mijloace, poate fi, de asemenea, un instrument puternic pentru dezvoltarea personală și profesională.
 
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Pe lângă transmiterea de cunoștințe și abilități, educația are câteva alte funcții importante. Încurajează gândirea critică, creativitatea și abilitățile de rezolvare a problemelor, care sunt esențiale pentru succesul în lumea de astăzi în schimbare rapidă. De asemenea, promovează coeziunea și înțelegerea socială prin expunerea indivizilor la diverse culturi, idei și perspective.
+                    Pe lângă transmiterea de cunoștințe și abilități, educația are câteva alte funcții importante. Încurajează gândirea critică, creativitatea și abilitățile de rezolvare a problemelor, care sunt esențiale pentru succesul în lumea de astăzi în schimbare rapidă. De asemenea, promovează coeziunea și înțelegerea socială prin expunerea indivizilor la diverse culturi, idei și perspective.
 
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                În ciuda importanței sale, accesul la educație nu este egal în întreaga lume. Mulți indivizi, în special cei din țările în curs de dezvoltare, nu au acces la educație de calitate din cauza unor factori precum sărăcia, discriminarea de gen și infrastructura inadecvată. Abordarea acestor provocări și asigurarea faptului că toată lumea are acces la o educație de calitate este esențială pentru promovarea justiției sociale și a dezvoltării economice.
+                    În ciuda importanței sale, accesul la educație nu este egal în întreaga lume. Mulți indivizi, în special cei din țările în curs de dezvoltare, nu au acces la educație de calitate din cauza unor factori precum sărăcia, discriminarea de gen și infrastructura inadecvată. Abordarea acestor provocări și asigurarea faptului că toată lumea are acces la o educație de calitate este esențială pentru promovarea justiției sociale și a dezvoltării economice.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                În concluzie, educația este o componentă crucială a dezvoltării personale și societale. Oferă indivizilor cunoștințele, abilitățile și valorile necesare pentru succesul în viață și joacă un rol vital în promovarea mobilității sociale si dezvoltării economice .Investind în educație și promovând accesul egal la educație de calitate pentru toți, putem crea o lume mai echitabilă și mai prosperă pentru toată lumea.
+                    În concluzie, educația este o componentă crucială a dezvoltării personale și societale. Oferă indivizilor cunoștințele, abilitățile și valorile necesare pentru succesul în viață și joacă un rol vital în promovarea mobilității sociale si dezvoltării economice .Investind în educație și promovând accesul egal la educație de calitate pentru toți, putem crea o lume mai echitabilă și mai prosperă pentru toată lumea.
                 </p>
             </div>
 

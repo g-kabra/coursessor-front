@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 import dynamic from "next/dynamic";
 import Footer from "../../../../components/Footer";
-
+import GTag from "../../../../components/gtag";
 
 
 export default function Page() {
@@ -42,6 +42,7 @@ export default function Page() {
     return (
         <>
             <Head>
+                <GTag measurementId="G-GWMRVJ2DK8" />
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />

@@ -4,6 +4,7 @@ import Head from "next/head"
 import Navbar from "../../../../components/Navbar";
 import Layout from "../../../../components/Layout";
 import { useState, useEffect, useRef } from "react";
+import GTag from "../../../../components/gtag";
 
 import dynamic from "next/dynamic";
 import PostHeader from "../../../../components/PostHeader";
@@ -43,6 +44,7 @@ export default function Page() {
     return (
         <>
             <Head>
+                <GTag measurementId="G-GWMRVJ2DK8" />
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />

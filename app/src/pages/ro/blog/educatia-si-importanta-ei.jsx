@@ -4,11 +4,10 @@ import Head from "next/head"
 import Navbar from "../../../../components/Navbar";
 import Layout from "../../../../components/Layout";
 import { useState, useEffect, useRef } from "react";
-
 import dynamic from "next/dynamic";
 import PostHeader from "../../../../components/PostHeader";
 import Footer from "../../../../components/Footer";
-
+import GTag from "../../../../components/gtag";
 
 
 export default function Page() {
@@ -43,6 +42,7 @@ export default function Page() {
     return (
         <>
             <Head>
+                <GTag measurementId="G-GWMRVJ2DK8" />
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -98,19 +98,19 @@ export default function Page() {
 
             <div className="content flex flex-col p-5 mt-5">
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight">
-                Educația reprezintă un aspect crucial al vieții noastre. Este procesul de dobândire a cunoștințelor, abilităților, valorilor și atitudinilor necesare pentru creșterea, dezvoltarea și succesul personal. Educația nu se limitează la sala de clasă, ci cuprinde toate aspectele vieții.
+                    Educația reprezintă un aspect crucial al vieții noastre. Este procesul de dobândire a cunoștințelor, abilităților, valorilor și atitudinilor necesare pentru creșterea, dezvoltarea și succesul personal. Educația nu se limitează la sala de clasă, ci cuprinde toate aspectele vieții.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Ea ne echipează cu abilități de gândire critică, abilități de rezolvare a problemelor și capacitatea de a lua decizii informate. Educația este esențială pentru o carieră de succes și o viață împlinită.
+                    Ea ne echipează cu abilități de gândire critică, abilități de rezolvare a problemelor și capacitatea de a lua decizii informate. Educația este esențială pentru o carieră de succes și o viață împlinită.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Educația este, de asemenea, un drept fundamental al omului. Toată lumea ar trebui să aibă acces la o educație de calitate. Educația este esențială pentru reducerea sărăciei, promovarea dezvoltării durabile și obținerea unei calități mai bune a vieții.
+                    Educația este, de asemenea, un drept fundamental al omului. Toată lumea ar trebui să aibă acces la o educație de calitate. Educația este esențială pentru reducerea sărăciei, promovarea dezvoltării durabile și obținerea unei calități mai bune a vieții.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10">
-                În lumea de astăzi, educația a devenit mai importantă ca niciodată. Abilitățile necesare pentru a reuși la locul de muncă evoluează constant, iar educația joacă un rol esențial în dobândirea acestora.
+                    În lumea de astăzi, educația a devenit mai importantă ca niciodată. Abilitățile necesare pentru a reuși la locul de muncă evoluează constant, iar educația joacă un rol esențial în dobândirea acestora.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10">
-                În concluzie, educația este o parte esențială a vieții noastre. Ne oferă cunoștințele și abilitățile necesare pentru succesul profesional. Educația este un drept al omului care ar trebui să fie accesibil tuturor și este crucială pentru a crea un viitor mai bun pentru noi înșine și pentru generațiile viitoare.
+                    În concluzie, educația este o parte esențială a vieții noastre. Ne oferă cunoștințele și abilitățile necesare pentru succesul profesional. Educația este un drept al omului care ar trebui să fie accesibil tuturor și este crucială pentru a crea un viitor mai bun pentru noi înșine și pentru generațiile viitoare.
                 </p>
 
             </div>

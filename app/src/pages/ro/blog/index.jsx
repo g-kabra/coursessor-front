@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useState, useEffect, useRef } from "react";
 import Footer from "../../../../components/Footer";
 import BlogCard from "../../../../components/BlogCard";
+import GTag from "../../../../components/gtag";
 
 export default function Home() {
 
@@ -37,6 +38,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <GTag measurementId="G-GWMRVJ2DK8" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />

@@ -6,41 +6,42 @@ import Layout from "../../../../components/Layout";
 import { useState, useEffect, useRef } from "react";
 
 import dynamic from "next/dynamic";
-
+import GTag from "../../../../components/gtag";
 
 
 export default function Page() {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-          import('scrollreveal').then((ScrollReveal) => {
-            const sr = ScrollReveal.default();
-            sr.reveal('.fade', { duration: 1000 });
-          });
+            import('scrollreveal').then((ScrollReveal) => {
+                const sr = ScrollReveal.default();
+                sr.reveal('.fade', { duration: 1000 });
+            });
         }
-      }, []);
+    }, []);
 
-      const [isScrolled, setIsScrolled] = useState(false);
-      const navbarRef = useRef(null);
-    
-      useEffect(() => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const navbarRef = useRef(null);
+
+    useEffect(() => {
         const handleScroll = () => {
-          const scrollTop = window.pageYOffset;
-          const navbarOffset = navbarRef.current?.offsetTop || 55;
-          setIsScrolled(scrollTop > navbarOffset);
+            const scrollTop = window.pageYOffset;
+            const navbarOffset = navbarRef.current?.offsetTop || 55;
+            setIsScrolled(scrollTop > navbarOffset);
         };
-    
+
         window.addEventListener("scroll", handleScroll);
-    
+
         return () => {
-          window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
-      }, []);
-    
+    }, []);
+
 
     return (
         <>
             <Head>
+                <GTag measurementId="G-GWMRVJ2DK8" />
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -93,16 +94,16 @@ export default function Page() {
 
 
             <div className="content flex flex-col p-5 mt-5">
-                <p  className="fade font-satoshi text-3xl mg:text-xl tracking-tight">
-                Profesorii stau la baza oricărei  instituții de învățământ. Ei  joacă un rol vital în viaţa studenților . Profesorii își dedică timpul și experiența penru a-i invăța pe  studenți și se angajează să-i ajute  să-și atingă potențialul maxim. 
+                <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight">
+                    Profesorii stau la baza oricărei  instituții de învățământ. Ei  joacă un rol vital în viaţa studenților . Profesorii își dedică timpul și experiența penru a-i invăța pe  studenți și se angajează să-i ajute  să-și atingă potențialul maxim.
 
                 </p>
-                <p  className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Profesorii se pricep să elaboreze  și să predea  lecții eficiente care îi ajută pe elevi să învețe și să înțeleagă concepte noi. Ei folosesc o varietate de metode de predare adaptate stilului de învățare al fiecarui elev  și sunt mereu în căutarea unor noi modalități de a-și îmbunătăți metodele de predare. Pe lângă predare, profesorii servesc și ca mentori pentru elevii lor. 
+                <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
+                    Profesorii se pricep să elaboreze  și să predea  lecții eficiente care îi ajută pe elevi să învețe și să înțeleagă concepte noi. Ei folosesc o varietate de metode de predare adaptate stilului de învățare al fiecarui elev  și sunt mereu în căutarea unor noi modalități de a-și îmbunătăți metodele de predare. Pe lângă predare, profesorii servesc și ca mentori pentru elevii lor.
                 </p>
-                <p  className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Ei insuflă valori precum integritatea, respectul și munca grea. De asemenea, oferă sprijin emoțional și psihologic studenților care au probleme personale. Fără profesori, lumea ar fi  mult mai puțin educată.  Profesorii au un impact profund asupra vieții elevilor, iar influența lor  are un impact profund asupra vietii elevilor . A fi profesor este mai mult decât o slujbă, este o vocație. Este nevoie de răbdare, dăruire și muncă asiduă. Profesorii sunt eroi  care merită respectul și aprecierea noastră pentru eforturile lor neobosite de a modela viitorul societății.
-                </p>                
+                <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
+                    Ei insuflă valori precum integritatea, respectul și munca grea. De asemenea, oferă sprijin emoțional și psihologic studenților care au probleme personale. Fără profesori, lumea ar fi  mult mai puțin educată.  Profesorii au un impact profund asupra vieții elevilor, iar influența lor  are un impact profund asupra vietii elevilor . A fi profesor este mai mult decât o slujbă, este o vocație. Este nevoie de răbdare, dăruire și muncă asiduă. Profesorii sunt eroi  care merită respectul și aprecierea noastră pentru eforturile lor neobosite de a modela viitorul societății.
+                </p>
             </div>
 
             <div className="authorName p-5">
