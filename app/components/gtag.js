@@ -1,28 +1,22 @@
 import { useEffect } from 'react';
 
-const GTag = ({ measurementId }) => {
+const GTag = ({ measurementId, transportUrl, firstPartyCollection }) => {
   useEffect(() => {
     if (measurementId) {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', measurementId);
+      gtag('config', measurementId, {
+        'transport_url': transportUrl,
+        'first_party_collection': firstPartyCollection,
+      });
     }
-  }, [measurementId]);
+  }, [measurementId, transportUrl, firstPartyCollection]);
 
-  return (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
-      <script dangerouslySetInnerHTML={{
-        __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${measurementId}');
-        `,
-      }}></script>
-    </>
-  );
+  return null;
 };
 
 export default GTag;
+
+
+
