@@ -38,7 +38,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <GTag measurementId="G-GWMRVJ2DK8" />
+        <GTag
+          measurementId="G-GWMRVJ2DK8"
+          transportUrl="https://measure.coursessor.com"
+          firstPartyCollection={true}
+        />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />

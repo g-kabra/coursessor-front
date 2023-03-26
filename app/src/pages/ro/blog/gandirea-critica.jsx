@@ -42,7 +42,11 @@ export default function Page() {
     return (
         <>
             <Head>
-                <GTag measurementId="G-GWMRVJ2DK8" />
+                <GTag
+                    measurementId="G-GWMRVJ2DK8"
+                    transportUrl="https://measure.coursessor.com"
+                    firstPartyCollection={true}
+                />
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -96,22 +100,22 @@ export default function Page() {
 
             <div className="content flex flex-col p-5 mt-5">
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight">
-                Gândirea critică este o abilitate importantă care reprezintă capacitatea de a analiza și evalua informațiile într-un mod atent și sistematic. Ea reprezinta analizarea ipotezelor, luarea în considerare a diferitelor perspective și utilizarea dovezilor pentru a lua  decizii motivate.
+                    Gândirea critică este o abilitate importantă care reprezintă capacitatea de a analiza și evalua informațiile într-un mod atent și sistematic. Ea reprezinta analizarea ipotezelor, luarea în considerare a diferitelor perspective și utilizarea dovezilor pentru a lua  decizii motivate.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                În lumea de astăzi, în care suntem bombardați în mod constant cu informații dintr-o varietate de surse, gândirea critică a devenit din ce în ce mai importantă. Capacitatea de a separa faptele de ficțiune, de a evalua credibilitatea surselor și de a lua decizii în cunoștință de cauză este esențială pentru a  face alegeri corecte.
+                    În lumea de astăzi, în care suntem bombardați în mod constant cu informații dintr-o varietate de surse, gândirea critică a devenit din ce în ce mai importantă. Capacitatea de a separa faptele de ficțiune, de a evalua credibilitatea surselor și de a lua decizii în cunoștință de cauză este esențială pentru a  face alegeri corecte.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Gândirea critică este o abilitate importantă care reprezintă capacitatea de a analiza și evalua informațiile într-un mod atent și sistematic. Ea reprezintă analizarea ipotezelor, luarea în considerare a diferitelor perspective și utilizarea dovezilor pentru a lua decizii motivate.
+                    Gândirea critică este o abilitate importantă care reprezintă capacitatea de a analiza și evalua informațiile într-un mod atent și sistematic. Ea reprezintă analizarea ipotezelor, luarea în considerare a diferitelor perspective și utilizarea dovezilor pentru a lua decizii motivate.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                În lumea de astăzi, în care suntem bombardați în mod constant cu informații dintr-o varietate de surse, gândirea critică a devenit din ce în ce mai importantă. Capacitatea de a separa faptele de ficțiune, de a evalua credibilitatea surselor și de a lua decizii în cunoștință de cauză este esențială pentru a face alegeri corecte.
+                    În lumea de astăzi, în care suntem bombardați în mod constant cu informații dintr-o varietate de surse, gândirea critică a devenit din ce în ce mai importantă. Capacitatea de a separa faptele de ficțiune, de a evalua credibilitatea surselor și de a lua decizii în cunoștință de cauză este esențială pentru a face alegeri corecte.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Gândirea critică nu înseamnă a pune la îndoială totul. Insemna de asemenea   a fi deschis la minte și a fi dispus să iei în considerare diferite perspective și idei.
+                    Gândirea critică nu înseamnă a pune la îndoială totul. Insemna de asemenea   a fi deschis la minte și a fi dispus să iei în considerare diferite perspective și idei.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Dezvoltarea abilităților de gândire critică necesită timp și practică. Aceasta implică adresarea de întrebări, strângerea și evaluarea dovezilor, luarea în considerare a diferitelor puncte de vedere și cântărirea avantajelor și dezavantajelor diferitelor opțiuni.   
+                    Dezvoltarea abilităților de gândire critică necesită timp și practică. Aceasta implică adresarea de întrebări, strângerea și evaluarea dovezilor, luarea în considerare a diferitelor puncte de vedere și cântărirea avantajelor și dezavantajelor diferitelor opțiuni.
                 </p>
             </div>
 

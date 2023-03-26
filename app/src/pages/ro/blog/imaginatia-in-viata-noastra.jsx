@@ -42,7 +42,11 @@ export default function Page() {
     return (
         <>
             <Head>
-                <GTag measurementId="G-GWMRVJ2DK8" />
+                <GTag
+                    measurementId="G-GWMRVJ2DK8"
+                    transportUrl="https://measure.coursessor.com"
+                    firstPartyCollection={true}
+                />
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -96,22 +100,22 @@ export default function Page() {
 
             <div className="content flex flex-col p-5 mt-5">
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight">
-                Imaginația este un instrument puternic care ne permite să creăm și să explorăm noi idei și concepte. Este capacitatea de a forma imagini mentale   despre lucruri care nu sunt prezente in realitate. Imaginația este adesea asociată cu creativitatea și joacă un rol crucial în multe aspecte ale vieții noastre.
+                    Imaginația este un instrument puternic care ne permite să creăm și să explorăm noi idei și concepte. Este capacitatea de a forma imagini mentale   despre lucruri care nu sunt prezente in realitate. Imaginația este adesea asociată cu creativitatea și joacă un rol crucial în multe aspecte ale vieții noastre.
 
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Imaginația ne permite să ne imaginăm posibilități care încă nu există și ne oferă capacitatea de a visa, de a planifica și de a inova. Fără imaginație, am fi limitați la ceea ce există deja în lumea noastră și am fi incapabili să dezvoltăm noi tehnologii si  să rezolvăm probleme complexe.
+                    Imaginația ne permite să ne imaginăm posibilități care încă nu există și ne oferă capacitatea de a visa, de a planifica și de a inova. Fără imaginație, am fi limitați la ceea ce există deja în lumea noastră și am fi incapabili să dezvoltăm noi tehnologii si  să rezolvăm probleme complexe.
 
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Copiii sunt adesea lăudați pentru imaginația lor vie, dar pe măsură ce creștem devenim mai puțin dispuși să ne folosim imaginatia. Cu toate acestea, utilizarea imaginației noastre poate fi incredibil de benefică atât pentru dezvoltarea personală, cât și profesională. Putem găsi soluții inovatoare  și putem dezvolta proiecte  care aduc bucurie și sens vieții noastre.
+                    Copiii sunt adesea lăudați pentru imaginația lor vie, dar pe măsură ce creștem devenim mai puțin dispuși să ne folosim imaginatia. Cu toate acestea, utilizarea imaginației noastre poate fi incredibil de benefică atât pentru dezvoltarea personală, cât și profesională. Putem găsi soluții inovatoare  și putem dezvolta proiecte  care aduc bucurie și sens vieții noastre.
 
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                Imaginația joacă, de asemenea, un rol crucial în empatie și înțelegere. Când ne folosim imaginația pentru a ne pune în locul altcuiva, putem obține o înțelegere mai profundă a perspectivei și experiențele lor. Acest lucru ne poate ajuta să construim relații mai puternice, să dezvoltăm mai multă empatie și compasiune și să creăm o societate mai înțelegătoare.
+                    Imaginația joacă, de asemenea, un rol crucial în empatie și înțelegere. Când ne folosim imaginația pentru a ne pune în locul altcuiva, putem obține o înțelegere mai profundă a perspectivei și experiențele lor. Acest lucru ne poate ajuta să construim relații mai puternice, să dezvoltăm mai multă empatie și compasiune și să creăm o societate mai înțelegătoare.
                 </p>
                 <p className="fade font-satoshi text-3xl mg:text-xl tracking-tight mt-10 ">
-                În concluzie, imaginația este un instrument puternic care ne poate ajuta să explorăm lumi noi, să dezvoltăm soluții inovatoare și să construim relații mai puternice. Îmbrățișându-ne imaginația și utilizându-i la maximum potențialul, putem crea un viitor mai luminos și mai vibrant pentru noi înșine și pentru cei din jurul nostru.
+                    În concluzie, imaginația este un instrument puternic care ne poate ajuta să explorăm lumi noi, să dezvoltăm soluții inovatoare și să construim relații mai puternice. Îmbrățișându-ne imaginația și utilizându-i la maximum potențialul, putem crea un viitor mai luminos și mai vibrant pentru noi înșine și pentru cei din jurul nostru.
                 </p>
             </div>
 
