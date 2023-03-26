@@ -5,7 +5,6 @@ import Image from "next/image"
 import { useState, useEffect, useRef } from "react";
 import Footer from "../../../../components/Footer";
 import BlogCard from "../../../../components/BlogCard";
-import GTag from "../../../../components/gtag";
 
 export default function Home() {
 

@@ -2,12 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head"
 import Navbar from "../../../../components/Navbar";
-import Layout from "../../../../components/Layout";
 import { useState, useEffect, useRef } from "react";
-import GTag from "../../../../components/gtag";
-
-import dynamic from "next/dynamic";
-import PostHeader from "../../../../components/PostHeader";
 import Footer from "../../../../components/Footer";
 
 
