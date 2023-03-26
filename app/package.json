@@ -24,6 +24,7 @@
     "postcss-preset-env": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
     "scrollreveal": "^4.0.9",
     "sharp": "^0.31.3",
     "yarn": "^1.22.19"
