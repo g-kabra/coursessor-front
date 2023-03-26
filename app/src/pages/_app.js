@@ -5,9 +5,15 @@ import TagManager from 'react-gtm-module';
 
 function MyApp({ Component, pageProps }) {
   const { theme } = pageProps;
+
+  // Initialize Google Tag Manager
+  if (typeof window !== 'undefined') {
+    TagManager.initialize({ gtmId: 'GTM-T96R7R2' });
+  }
+
+
   return (
     <ThemeProvider defaultTheme={theme}>
-      <TagManager gtmId="GTM-T96R7R2" />
       <Component {...pageProps} />
     </ThemeProvider>
   );
