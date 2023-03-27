@@ -17,7 +17,7 @@ const Navbar = forwardRef(({ isScrolled, showToggleDarkMode = true, isFixed=true
         <div className="logo mt-6 ml-6">
           <Image
             className="logo w-142"
-            src="https://coursessor.s3.eu-central-1.amazonaws.com/A15908_Coursessor_Logo_AP+(1).png"
+            src="https://d16l08y6awdtxf.cloudfront.net/A15908_Coursessor_Logo_AP+(1).png"
             alt=""
             width={142}
             height={0}

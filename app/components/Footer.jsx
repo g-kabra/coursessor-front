@@ -51,7 +51,7 @@ export default function Footer() {
 
                 <Link href="/ro/blog">
                     <div className="logo ml-7 mg:ml-0 mg:mt-8 mg:mb-8">
-                        <Image className="logo w-142" src="https://coursessor.s3.eu-central-1.amazonaws.com/A15908_Coursessor_Logo_AP+(1).png" alt="" width={142} height={0} />
+                        <Image className="logo w-142" src="https://d16l08y6awdtxf.cloudfront.net/A15908_Coursessor_Logo_AP+(1).png" alt="" width={142} height={0} />
                     </div>
                 </Link>
 

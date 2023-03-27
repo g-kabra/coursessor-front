@@ -56,7 +56,7 @@ export default function Home() {
         <meta name="category" content="educație" />
         <meta property="og:title" content="Coursessor Blog - Articole utile despre educație și tehnologie" />
         <meta property="og:description" content="Coursessor Blog este un loc unde găsiți cele mai recente știri și articole despre tehnologie în educație, cu un accent pe dezvoltarea personală și profesională." />
-        <meta property="og:image" content="https://coursessor.s3.eu-central-1.amazonaws.com/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg" />
+        <meta property="og:image" content="https://d16l08y6awdtxf.cloudfront.net/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg" />
         <meta property="og:url" content="https://coursessor.com/ro/blog" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@coursessor" />
@@ -73,7 +73,7 @@ export default function Home() {
 
       <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
         <video
-          src="https://coursessor.s3.eu-central-1.amazonaws.com/pexels-tima-miroshnichenko-6549275.mp4"
+          src="https://d16l08y6awdtxf.cloudfront.net/pexels-tima-miroshnichenko-6549275.mp4"
           autoPlay
           loop
           muted
@@ -92,19 +92,19 @@ export default function Home() {
 
 
 
-      <BlogCard imageSrc={"https://coursessor.s3.eu-central-1.amazonaws.com/3d-render-abstract-background-with-brain-that-surrounded-with-particles-with-twisted-trails-trails-particles-are-symoizing-ideas.jpg"} alt={"brain"} headline={"De la învățat mecanic la gândire critică"} description={"Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea critică și imaginația elevilor, la activitatea complexă din zilele noastre."} href={"/ro/blog/de-la-invatat-mecanic-la-gandire-critica"} />
+      <BlogCard imageSrc={"https://d16l08y6awdtxf.cloudfront.net/3d-render-abstract-background-with-brain-that-surrounded-with-particles-with-twisted-trails-trails-particles-are-symoizing-ideas.jpg"} alt={"brain"} headline={"De la învățat mecanic la gândire critică"} description={"Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea critică și imaginația elevilor, la activitatea complexă din zilele noastre."} href={"/ro/blog/de-la-invatat-mecanic-la-gandire-critica"} />
 
-      <BlogCard imageSrc={"https://coursessor.s3.eu-central-1.amazonaws.com/man-opened-magic-book-with-growing-lights-magic-powder-learning-education-concept.jpg"} alt={"man holding a book"} headline={"Profesorul modern"} description={"Relația dintre profesori și elevii lor s-a schimbat atât de mult încât din simplii dascăli profesorii au devenit adevărate modele pentru elevii lor."} href={"/ro/blog/profesorul-modern"} />
+      <BlogCard imageSrc={"https://d16l08y6awdtxf.cloudfront.net/man-opened-magic-book-with-growing-lights-magic-powder-learning-education-concept.jpg"} alt={"man holding a book"} headline={"Profesorul modern"} description={"Relația dintre profesori și elevii lor s-a schimbat atât de mult încât din simplii dascăli profesorii au devenit adevărate modele pentru elevii lor."} href={"/ro/blog/profesorul-modern"} />
 
-      <BlogCard imageSrc={"https://coursessor.s3.eu-central-1.amazonaws.com/front-view-stacked-books-ladders-education-day.jpg"} alt={"books and ladder"} headline={"Educația și importanța ei"} description={"Din cele mai vechi timpuri scopul educației a fost să pregătească generațiile viitoare."} href={"/ro/blog/educatia-si-importanta-ei"} />
+      <BlogCard imageSrc={"https://d16l08y6awdtxf.cloudfront.net/front-view-stacked-books-ladders-education-day.jpg"} alt={"books and ladder"} headline={"Educația și importanța ei"} description={"Din cele mai vechi timpuri scopul educației a fost să pregătească generațiile viitoare."} href={"/ro/blog/educatia-si-importanta-ei"} />
 
-      <BlogCard imageSrc={"https://coursessor.s3.eu-central-1.amazonaws.com/person-holding-light-bulb-with-graduation-cap.jpg"} alt={"bulb"} headline={"Gândirea critică"} description={"Ce este și cum o putem folosi"} href={"/ro/blog/gandirea-critica"} />
+      <BlogCard imageSrc={"https://d16l08y6awdtxf.cloudfront.net/person-holding-light-bulb-with-graduation-cap.jpg"} alt={"bulb"} headline={"Gândirea critică"} description={"Ce este și cum o putem folosi"} href={"/ro/blog/gandirea-critica"} />
 
-      <BlogCard imageSrc={"https://coursessor.s3.eu-central-1.amazonaws.com/1586193_11831.jpg"} alt={"projection"} headline={"Inteligența în viața noastră"} description={"Ce înseamnă să fii inteligent și cum îți poți dezvolta inteligența"} href={"/ro/blog/inteligenta-in-viata-noastra"} />
+      <BlogCard imageSrc={"https://d16l08y6awdtxf.cloudfront.net/1586193_11831.jpg"} alt={"projection"} headline={"Inteligența în viața noastră"} description={"Ce înseamnă să fii inteligent și cum îți poți dezvolta inteligența"} href={"/ro/blog/inteligenta-in-viata-noastra"} />
 
-      <BlogCard imageSrc={"https://coursessor.s3.eu-central-1.amazonaws.com/bw-greek-statue-image-torn-paper-style-remixed-media.jpg"} alt={"imagination"} headline={"Imaginația în viața noastră"} description={"Imaginația este un dar pe care toți oamenii îl au atunci când se nasc însă din nefericire unii dintre noi îl pierd."} href={"/ro/blog/imaginatia-in-viata-noastra"} />
+      <BlogCard imageSrc={"https://d16l08y6awdtxf.cloudfront.net/bw-greek-statue-image-torn-paper-style-remixed-media.jpg"} alt={"imagination"} headline={"Imaginația în viața noastră"} description={"Imaginația este un dar pe care toți oamenii îl au atunci când se nasc însă din nefericire unii dintre noi îl pierd."} href={"/ro/blog/imaginatia-in-viata-noastra"} />
 
-      <BlogCard imageSrc={"https://coursessor.s3.eu-central-1.amazonaws.com/graduation-take-black-yellow-tassel-front-bokeh-blurry-background.jpg"} alt={"graduation"} headline={"Educația și rolul ei"} description={"Rolul educației indiferent este extrem de important în viața noastră, indiferent de care tip de educație este vorba."} href={"/ro/blog/educatia-si-rolul-ei"} />
+      <BlogCard imageSrc={"https://d16l08y6awdtxf.cloudfront.net/graduation-take-black-yellow-tassel-front-bokeh-blurry-background.jpg"} alt={"graduation"} headline={"Educația și rolul ei"} description={"Rolul educației indiferent este extrem de important în viața noastră, indiferent de care tip de educație este vorba."} href={"/ro/blog/educatia-si-rolul-ei"} />
 
 
       <Footer />

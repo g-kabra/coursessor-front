@@ -57,7 +57,7 @@ export default function Page() {
                 <meta name="category" content="educație" />
                 <meta property="og:title" content="Coursessor Blog - Articole utile despre educație și tehnologie" />
                 <meta property="og:description" content="Coursessor Blog este un loc unde găsiți cele mai recente știri și articole despre tehnologie în educație, cu un accent pe dezvoltarea personală și profesională." />
-                <meta property="og:image" content="https://coursessor.s3.eu-central-1.amazonaws.com/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg" />
+                <meta property="og:image" content="https://d16l08y6awdtxf.cloudfront.net/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg" />
                 <meta property="og:url" content="https://coursessor.com/ro/blog" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@coursessor" />
@@ -73,7 +73,7 @@ export default function Page() {
 
             <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
                 <video
-                    src="https://coursessor.s3.eu-central-1.amazonaws.com/pexels-tima-miroshnichenko-6550419.mp4"
+                    src="https://d16l08y6awdtxf.cloudfront.net/pexels-marina-zasorina-7601710.mp4"
                     autoPlay
                     loop
                     muted
