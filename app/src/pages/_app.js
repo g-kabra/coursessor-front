@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import TagManager from 'react-gtm-module';
 
 function MyApp({ Component, pageProps }) {
-  const { theme, systemTheme } = pageProps;
+  const { theme } = pageProps;
 
   // Initialize Google Tag Manager
   if (typeof window !== 'undefined') {
@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }) {
 
 
   return (
-    <ThemeProvider defaultTheme={theme} enableSystem={true}>
-      <Component {...pageProps} theme={theme} systemTheme={systemTheme} />
+    <ThemeProvider defaultTheme={theme}>
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }
