@@ -41,7 +41,7 @@ export default function Page() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="theme-color" content="#121212" />
+        <meta name="theme-color" content="#000000" />
         <title>Coursessor Blog - Inteligența în viața noastră</title>
         <meta name="language" content="ro" />
         <meta name="geo.region" content="RO" />

@@ -29,7 +29,7 @@ export default function Chatlect() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="theme-color" content="#121212" />
+        <meta name="theme-color" content="#000000" />
         <title>Chatlect</title>
         <meta name="language" content="en" />
         <meta name="geo.region" content="US" />
