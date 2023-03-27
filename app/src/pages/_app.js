@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 
 
   return (
-    <ThemeProvider defaultTheme={theme}>
+    <ThemeProvider defaultTheme={theme} enableSystem={true} >
       <Component {...pageProps} />
     </ThemeProvider>
   );
