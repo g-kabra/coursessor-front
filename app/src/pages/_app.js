@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import '@/styles/main.css'
 import { ThemeProvider } from 'next-themes';
 import TagManager from 'react-gtm-module';
+import GoogleAnalytics from '../../components/Analytics';
 
 function MyApp({ Component, pageProps }) {
   const { theme } = pageProps;
@@ -11,9 +12,9 @@ function MyApp({ Component, pageProps }) {
     TagManager.initialize({ gtmId: 'GTM-T96R7R2' });
   }
 
-
   return (
     <ThemeProvider defaultTheme={theme} enableSystem={true} >
+      <GoogleAnalytics />
       <Component {...pageProps} />
     </ThemeProvider>
   );
