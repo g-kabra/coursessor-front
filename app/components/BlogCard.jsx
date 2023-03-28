@@ -12,6 +12,7 @@ export default function BlogCard(props) {
       className="object-cover w-full rounded-t-lg h-96 md:h-auto  md:rounded-l-lg"
       width={1000}
       height={1000}
+      priority={true}
     />
     <div className="flex flex-col justify-between p-4 leading-normal w-full">
       <h5 className="title text-3xl mg:text-2xl font-satoshi  font-bold tracking-tight text-left  dark:text-white">{headline}</h5>

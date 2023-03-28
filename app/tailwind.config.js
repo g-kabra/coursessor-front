@@ -4,6 +4,7 @@ module.exports = {
   darkMode: 'class',
   content: [
     "./node_modules/flowbite-react/**/*.js",
+    "./components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

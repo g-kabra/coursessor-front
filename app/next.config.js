@@ -39,6 +39,6 @@ module.exports = nextConfig
 
 module.exports = {
   images: {
-    domains: ['d16l08y6awdtxf.cloudfront.net'],
+    domains: ['cdn-images.coursessor.com', 'cdn-videos.coursessor.com'],
   },
 }

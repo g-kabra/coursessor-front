@@ -58,7 +58,7 @@ export default function Page() {
                 <meta name="category" content="educație" />
                 <meta property="og:title" content="Coursessor Blog - Educația și rolul ei" />
                 <meta property="og:description" content="Rolul educației indiferent este extrem de important în viața noastră, indiferent de care tip de educație este vorba." />
-                <meta property="og:image" content="https://d16l08y6awdtxf.cloudfront.net/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg" />
+                <meta property="og:image" content="https://cdn-images.coursessor.com/serious-experienced-businesspeople-wearing-casual-formal-wear-discussing-preparing-law-case-contract-tender-assignment-agreement.jpg" />
                 <meta property="og:url" content="https://coursessor.com/ro/blog/educatia-si-rolul-ei" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@coursessor" />
@@ -74,7 +74,7 @@ export default function Page() {
 
             <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
                 <video
-                    src="https://d16l08y6awdtxf.cloudfront.net/pexels-marina-zasorina-7601710.mp4"
+                    src="https://cdn-videos.coursessor.com/pexels-marina-zasorina-7601710.mp4"
                     autoPlay
                     loop
                     muted
