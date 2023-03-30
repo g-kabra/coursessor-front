@@ -55,6 +55,10 @@ video::-webkit-media-controls-start-playback-button {
       @apply mb-3
     }
 
+    textarea {
+      width: auto;
+      height: 50px;
+    }
   }
 
 

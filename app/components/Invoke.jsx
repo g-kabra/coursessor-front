@@ -48,11 +48,14 @@ export default function Invoke() {
       {response !== '' && (
         <div className='response p-10 border rounded-lg w-full'>{response.substring(0, typingIndex)}</div>
       )}
-      <form onSubmit={handleSubmit} className="flex flex-col justify-between mt-15">
+      <form onSubmit={handleSubmit} className="flex flex-wrap flex-col justify-between mt-15">
         <label>
-          <textarea value={userInput} onChange={handleChange} className='bg-transparent border rounded-lg mt-10 mx-10' rows="4" cols="40" />
+          <textarea value={userInput} placeholder="Your text here..." onChange={handleChange} className='bg-transparent border rounded-lg mt-10' rows="2" cols="35" />
         </label>
-        <button type="submit" class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm mx-10 py-2.5 text-center  mt-5 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900 0x">Start</button>
+        <button type="submit" class="text-white focus:outline-none  font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center">
+        Start
+        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
       </form>
     </div>
   );
