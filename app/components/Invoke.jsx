@@ -10,6 +10,8 @@ export default function Invoke() {
     try {
       const response = await fetch('https://api.coursessor.com/', {
         method: 'POST',
+        mode: 'cors',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -26,6 +28,7 @@ export default function Invoke() {
       console.error(error);
     }
   };
+
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
