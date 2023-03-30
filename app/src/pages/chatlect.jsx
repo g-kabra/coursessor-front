@@ -3,6 +3,8 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react";
+import Footer from "../../components/Footer";
+import Invoke from "../../components/Invoke";
 
 export default function Chatlect() {
 
@@ -62,7 +64,7 @@ export default function Chatlect() {
 
       <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
                 <video
-                src="https://coursessor.s3.eu-central-1.amazonaws.com/connection-113368.mp4"
+                src="https://cdn-videos.coursessor.com/connection-113368.mp4"
                 autoPlay
                 loop
                 muted
@@ -72,11 +74,15 @@ export default function Chatlect() {
                 <div className="w-full h-full justify-center items-center backdrop-brightness-75">
                     <section className="flex flex-col items-end mg:items-start justify-center hero w-auto h-4/6">
                         <h1 className="headerh1chatlect text-8xl mg:text-6xl  font-satoshi p-5 text-white font-[500] mt-20">Introducing</h1>
-                        <Image src={"https://coursessor.s3.eu-central-1.amazonaws.com/chatlectlogowhite.png"} width={350} height={350} alt="chatlect logo" className="mr-20 mg:ml-6 animate-pulse" />
+                        <Image src={"https://cdn-images.coursessor.com/chatlectlogowhite.png"} width={350} height={350} alt="chatlect logo" className="mr-20 mg:ml-6 animate-pulse" />
                     </section>
                 </div>
                 <Navbar ref={navbarRef} isScrolled={isScrolled} showToggleDarkMode={true}/>
         </header>
+
+        <Invoke />
+
+        <Footer />
 
     </>
   )
