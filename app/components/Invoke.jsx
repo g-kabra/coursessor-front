@@ -32,9 +32,9 @@ export default function Invoke() {
   };
 
   return (
-    <div className='flex flex-col justify-center'>
+    <div className='flex flex-col items-center '>
       <div className='pt-10'>{response}</div>
-      <form onSubmit={handleSubmit} className = "flex flex-col justify-between">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-between">
         <label>
           User input:
           <input type="text" value={userInput} onChange={handleChange} />

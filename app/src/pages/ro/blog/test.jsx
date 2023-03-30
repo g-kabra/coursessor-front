@@ -4,7 +4,7 @@ import Head from "next/head"
 import Navbar from "../../../../components/Navbar";
 import { useState, useEffect, useRef } from "react";
 import Footer from "../../../../components/Footer";
-import Invoke from "../../../../components/invoke";
+import Invoke from "../../../../components/Invoke";
 
 
 
