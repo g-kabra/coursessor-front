@@ -45,12 +45,14 @@ export default function Invoke() {
 
   return (
     <div className='flex flex-col items-center '>
-      <div className='p-10'>{response.substring(0, typingIndex)}</div>
+      {response !== '' && (
+        <div className='response p-10 border rounded-lg w-full'>{response.substring(0, typingIndex)}</div>
+      )}
       <form onSubmit={handleSubmit} className="flex flex-col justify-between mt-15">
         <label>
-          <input type="text" value={userInput} onChange={handleChange} className='bg-transparent' />
+          <textarea value={userInput} onChange={handleChange} className='bg-transparent border rounded-lg mt-10 mx-10' rows="4" cols="40" />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm mx-10 py-2.5 text-center  mt-5 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900 0x">Start</button>
       </form>
     </div>
   );
