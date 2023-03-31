@@ -55,7 +55,7 @@ export default function Invoke() {
       )}
       <form onSubmit={handleSubmit} className="flex flex-col justify-between mt-15">
         <label>
-          <textarea value={userInput} onChange={handleChange} className='bg-transparent border rounded-lg mt-10 w-80 h-14' />
+          <textarea placeholder='Your text here...' value={userInput} onChange={handleChange} className='bg-transparent border rounded-lg mt-10 w-80 h-12' />
         </label>
         <button type="submit" disabled={isLoading} className="text-white focus:outline-none font-medium rounded-lg text-lg py-2.5 text-center inline-flex items-center">
           {isLoading ? (
