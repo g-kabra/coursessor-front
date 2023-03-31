@@ -1,7 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Head from "next/head"
 import Link from "next/link"
-import Image from "next/image"
 import { useState, useEffect, useRef } from "react";
 import Footer from "../../components/Footer";
 import Invoke from "../../components/Invoke";
@@ -74,7 +73,7 @@ export default function Chatlect() {
                 <div className="w-full h-full justify-center items-center backdrop-brightness-75">
                     <section className="flex flex-col items-end mg:items-start justify-center hero w-auto h-4/6">
                         <h1 className="headerh1chatlect text-8xl mg:text-6xl  font-satoshi p-5 text-white font-[500] mt-20">Introducing</h1>
-                        <Image src={"https://cdn-images.coursessor.com/chatlectlogowhite.png"} width={350} height={350} alt="chatlect logo" className="mr-20 mg:ml-6 animate-pulse" />
+                        <img src={"https://coursessor.imgix.net/chatlectlogowhite.png?loseless=true&auto=format"} width={350} height={350} alt="chatlect logo" className="mr-20 mg:ml-6 animate-pulse" />
                     </section>
                 </div>
                 <Navbar ref={navbarRef} isScrolled={isScrolled} showToggleDarkMode={true}/>

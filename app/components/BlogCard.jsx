@@ -1,18 +1,14 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function BlogCard(props) {
   const { className, imageSrc, alt, headline, description, href } = props;
 
   return (
     <div className="card flex flex-col items-center  border border-gray-200 rounded-lg shadow md:flex-col md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <Image
+    <img
       src={imageSrc}
       alt={alt}
       className="object-cover w-full rounded-t-lg h-96 md:h-auto  md:rounded-l-lg"
-      width={1000}
-      height={1000}
-      priority={true}
     />
     <div className="flex flex-col justify-between p-4 leading-normal w-full">
       <h5 className="title text-3xl mg:text-2xl font-satoshi  font-bold tracking-tight text-left  dark:text-white">{headline}</h5>

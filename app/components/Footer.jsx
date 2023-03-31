@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 
 export default function Footer() {
@@ -51,7 +50,7 @@ export default function Footer() {
 
                 <Link href="/ro/blog">
                     <div className="logo ml-7 mg:ml-0 mg:mt-8 mg:mb-8">
-                        <Image className="logo w-142" src="/A15908_Coursessor_Logo_AP (1).png" alt="" width={142} height={0} priority={true}/>
+                        <img className="logo w-142" src="/A15908_Coursessor_Logo_AP (1).png" alt="" width={142} height={0} />
                     </div>
                 </Link>
 
