@@ -57,7 +57,7 @@ export default function Invoke() {
         <label>
           <textarea placeholder='Your text here...' value={userInput} onChange={handleChange} className='bg-transparent border rounded-lg mt-10 w-80 h-12' />
         </label>
-        <button type="submit" disabled={isLoading} className="text-white focus:outline-none font-medium rounded-lg text-lg py-2.5 text-center inline-flex items-center">
+        <button type="submit" disabled={isLoading} className="focus:outline-none font-medium rounded-lg text-lg py-2.5 text-center inline-flex items-center">
           {isLoading ? (
             <div role="status">
               <div class="inline-block animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
