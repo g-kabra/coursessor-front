@@ -1,6 +1,5 @@
 import { forwardRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import ToggleDarkMode from "./ToggleDarkMode";
 
 const Navbar = forwardRef(({ isScrolled, showToggleDarkMode = true, isFixed=true }, ref) => {
@@ -15,13 +14,12 @@ const Navbar = forwardRef(({ isScrolled, showToggleDarkMode = true, isFixed=true
     >
       <Link href="/ro/blog">
         <div className="logo mt-6 ml-6">
-          <Image
+          <img
             className="logo w-142"
             src="/A15908_Coursessor_Logo_AP (1).png"
             alt=""
             width={142}
             height={0}
-            priority={true}
           />
         </div>
       </Link>
