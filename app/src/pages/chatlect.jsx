@@ -63,7 +63,7 @@ export default function Chatlect() {
 
       <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
                 <video
-                src="https://coursessorpublic.blob.core.windows.net/videoscontainer/connection-113368.mp4npom"
+                src="https://coursessorpublic.blob.core.windows.net/videoscontainer/connection-113368.mp4"
                 autoPlay
                 loop
                 muted
