@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head"
 import Navbar from "../../../../components/Navbar";
 import { useState, useEffect, useRef } from "react";
@@ -74,7 +72,7 @@ export default function Page() {
 
             <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
                 <video
-                    src="https://cdn-videos.coursessor.com/pexels-marina-zasorina-7601710.mp4"
+                    src="https://coursessorpublic.blob.core.windows.net/videoscontainer/pexels-marina-zasorina-7601710.mp4"
                     autoPlay
                     loop
                     muted

@@ -71,7 +71,7 @@ export default function Home() {
 
       <header className="relative overflow-hidden w-screen h-72 scroll-smooth">
         <video
-          src="https://cdn-videos.coursessor.com/pexels-tima-miroshnichenko-6550419.mp4"
+          src="https://coursessorpublic.blob.core.windows.net/videoscontainer/pexels-tima-miroshnichenko-6550419.mp4"
           autoPlay
           loop
           muted
