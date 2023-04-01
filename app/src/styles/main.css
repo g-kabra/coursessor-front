@@ -48,7 +48,7 @@ video::-webkit-media-controls-start-playback-button {
     /* Blog card section styles */
 
     .card {
-      @apply mx-10 mt-14 mg:mx-5
+      @apply mx-10 mt-14 mg:mx-5 !important
     }
 
     .title {
