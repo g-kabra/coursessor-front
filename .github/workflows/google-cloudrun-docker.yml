@@ -8,7 +8,7 @@ on:
 
 env:
   PROJECT_ID: coursessor-380913
-  REPO_NAME: coursessorfront
+  REPO_NAME: coursessor-repo
   IMAGE_NAME: coursessor-image
   IMAGE_TAG: latest
   LOCATION: europe-west1
