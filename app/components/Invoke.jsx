@@ -12,7 +12,7 @@ export default function Invoke() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://4ywlduggzuit4edt67uaubypzy0pjrci.lambda-url.eu-central-1.on.aws/', {
+      const response = await fetch('https://api.coursessor.com/', {
         method: 'POST',
         mode: 'cors',
         body: JSON.stringify({ userInput })

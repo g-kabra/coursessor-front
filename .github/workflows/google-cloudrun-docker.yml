@@ -11,7 +11,7 @@ env:
   REPO_NAME: coursessor-repo
   IMAGE_NAME: coursessor-image
   IMAGE_TAG: latest
-  LOCATION: europe-west8
+  LOCATION: europe-west1
   SERVICE: coursessor-frontend-service-europe
 
 permissions:
