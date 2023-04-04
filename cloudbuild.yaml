@@ -34,4 +34,4 @@ steps:
       - |
         gcloud run deploy coursessor-frontend-service-europe \
           --image gcr.io/coursessor-380913/github.com/coursessor/coursessor:$COMMIT_SHA \
-          --region europe-west8
+          --region europe-west1
