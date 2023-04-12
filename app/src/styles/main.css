@@ -1,62 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+::-webkit-scrollbar {
+  display: none;
+}
 
-video::-webkit-media-controls-start-playback-button {
-    display: none;
-  }
-  
-  video::-webkit-media-controls-play-button {
-    display: none;
-  }
-  
-  video::-webkit-media-controls {
-    display:none !important;
-    visibility:hidden !important;
-  }
-  
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
-@layer base {
-    .navbar {
-        background-color: black;
-      }
-      
-    .headerh1 {
-        margin-top: 15rem !important;
-        font-weight: 500 !important;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-    }
-
-    .headerh1home {
-        font-weight: 500 !important;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-    }
-
-    .headerh1chatlect {
-        margin-top: 10rem !important;
-        font-weight: 500 !important;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-    }
-
-    .backdrop{
-        width: full !important;
-    }
-
-    /* Blog card section styles */
-
-    .card {
-      @apply mx-10 mt-14 mg:mx-5 !important
-    }
-
-    .title {
-      @apply mb-3
-    }
-
-  }
-
-
-
-  
+*:focus {
+  outline: none;
+}

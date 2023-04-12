@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider defaultTheme={theme} enableSystem={true} >
-      <GoogleAnalytics />
+      {/* <GoogleAnalytics /> */}
       <Component {...pageProps} />
     </ThemeProvider>
   );
