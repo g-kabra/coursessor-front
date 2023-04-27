@@ -5,7 +5,7 @@ import Arrow from "../atoms/ArrowLink";
 
 function Contact() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-[90%] lg:w-[50%] mx-auto mt-20 text-left">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-[90%] lg:w-[50%] mx-auto mt-20 text-left pb-40">
       <div className="w-[100%] my-auto ml-auto py-10">
         <h1 className="text-4xl leading-normal relative">
           This is some heading

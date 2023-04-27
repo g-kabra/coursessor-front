@@ -14,6 +14,29 @@ function singleBlog() {
       "Coursessor is an ed-tech company that connects teachers and learners and offers the latest AI tech applied in education, using the power of Generative models and custom deep learning models to help students achieve their goals.Coursessor is an ed-tech company that connects teachers and learners and offers the latest AI tech applied in education, using the power of Generative models and custom deep learning models to help students achieve their goals.Coursessor is an ed-tech company that connects teachers and learners and offers the latest AI tech applied in education, using the power of Generative models and custom deep learning models to help students achieve their goals.",
     ],
   };
+  const other = [
+    {
+      imageLink: "/images/sampleImage.png",
+      heading: "De la învățat mecanic la gândire critică",
+      content:
+        "Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea.",
+      linkText: "Citeste mai mult",
+    },
+    {
+      imageLink: "/images/sampleImage.png",
+      heading: "De la învățat mecanic la gândire critică",
+      content:
+        "Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea.",
+      linkText: "Citeste mai mult",
+    },
+    {
+      imageLink: "/images/sampleImage.png",
+      heading: "De la învățat mecanic la gândire critică",
+      content:
+        "Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat în zilele noastre, de la o activitate menită să restrângă gândirea.",
+      linkText: "Citeste mai mult",
+    },
+  ];
   return (
     <Layout>
       <div className="w-[90%] mx-auto mt-10">
@@ -34,7 +57,7 @@ function singleBlog() {
             );
           })}
           <Title titleClass="mt-10">Other</Title>
-          <BlogList className="grid-cols-1 md:grid-cols-3 mx-auto" />
+          <BlogList className="grid-cols-1 md:grid-cols-3 mx-auto" data={other}/>
         </div>
       </div>
     </Layout>

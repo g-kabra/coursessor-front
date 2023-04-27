@@ -2,4 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.cdnfonts.com/css/satoshi');
+@font-face {
+    font-family: satoshi;
+    src: url(/fonts/Satoshi-Regular.otf);
+}
+
+* {
+    font-family: satoshi;
+}

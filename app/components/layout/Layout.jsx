@@ -7,7 +7,9 @@ function Layout(props) {
     <div className="bg-[#121519] text-white h-screen overflow-x-hidden">
       <Navbar />
       <div className="h-[10%]" />
-      {props.children}
+      <div className="bg-[url('/images/background.png')] bg-cover">
+        {props.children}
+      </div>
       <Footer />
     </div>
   );
