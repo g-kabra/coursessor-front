@@ -20,14 +20,14 @@ const Carousel = () => {
     return () => clearInterval(interval);
   });
   return (
-    <div className="xl:h-full xl:max-w-[70%] ml-auto my-auto flex flex-col gap-4 items-center justify-center">
-      <div className="h-auto relative flex flex-nowrap overflow-hidden outline outline-2 outline-[#6CE9BC]">
+    <div className="flex xl:h-full xl:max-w-[70%] ml-auto my-auto  flex-col gap-4 items-center justify-center">
+      <div className="h-auto relative w-fit flex-nowrap flex  overflow-hidden outline outline-2 outline-[#6CE9BC]">
         {images.map((e, index) => {
           return (
             <img
               src={e}
               style={{ transform: `translate(-${currentIndex * 100}%)` }}
-              className="w-full h-full transition-all duration-500"
+              className="w-full h-full transition-all duration-500 grow shrink-0"
               key={index}
               alt="Sample Image"
             />

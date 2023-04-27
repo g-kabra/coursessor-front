@@ -4,13 +4,13 @@ import Arrow from "./ArrowLink";
 const BlogDisplay = (props) => {
   return (
     <div
-      className={`flex flex-col text-left ${props.className} max-md:mt-10`}
-      key={props.key}>
-      <div className="flex md:flex-col gap-4 items-center justify-center">
+      className={`flex flex-col text-left ${props.className} max-md:mt-10 w-full`}
+      key={props.k}>
+      <div className="flex md:flex-col gap-4 items-center w-full">
         <img
           src={props.imageLink}
           alt=""
-          className="md:w-full w-[30%] h-auto object-cover outline outline-1 outline-[#6CE9BC]"
+          className="w-[30%] md:w-full h-auto object-cover outline outline-1 outline-[#6CE9BC]"
         />
         <h1 className="text-lg md:text-2xl leading-normal md:mt-10">{props.heading}</h1>
         <Arrow
