@@ -59,7 +59,7 @@ const Navbar = () => {
     };
   });
   return (
-    <div className="h-[10%] text-white w-full z-[5] fixed top-0 bg-[#121519]">
+    <div className="h-[10%] text-white w-full z-[5] fixed top-0 before:content-[''] before:h-full before:w-full before:backdrop-blur before:blur-[1px] before:block before:absolute before:-z-[1]">
       <div className="w-[90%] h-full items-center flex justify-between m-auto">
         <Link href="">
           <p className="relative text-xl font-medium z-[10]">Coursessor</p>
@@ -79,7 +79,8 @@ const Navbar = () => {
               }`}
               onClick={() => {
                 setOpenNav(!openNav);
-              }}>
+              }}
+            >
               <div className="flex flex-col items-center gap-10 text-2xl">
                 <Link href="">Home</Link>
                 <Link href="">Research</Link>
@@ -91,7 +92,8 @@ const Navbar = () => {
               onClick={() => {
                 setOpenNav(!openNav);
               }}
-              className="z-[10] relative">
+              className="z-[10] relative"
+            >
               <div></div>
               <div></div>
               <div></div>
