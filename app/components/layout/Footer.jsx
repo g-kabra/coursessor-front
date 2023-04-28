@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col gap-4 mb-10 w-[90%] mx-auto max-md:items-center">
+    <div className="flex flex-col gap-4 mb-10 w-[90%] mx-auto max-md:items-center mt-10">
       <h1 className="text-xl font-medium">Coursessor</h1>
       <div className="w-full flex justify-between text-sm font-light max-md:items-center">
         <p className="w-[20%] max-md:hidden">

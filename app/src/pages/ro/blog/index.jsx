@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../../../components/layout/Layout";
-import Title from "../../../components/atoms/Title";
-import BlogList from "../../../components/organisms/BlogList";
+import Layout from "../../../../components/layout/Layout";
+import Title from "../../../../components/atoms/Title";
+import BlogList from "../../../../components/organisms/BlogList";
 
 function Blogs() {
   const data = [
