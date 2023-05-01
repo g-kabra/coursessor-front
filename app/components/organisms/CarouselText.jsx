@@ -8,13 +8,11 @@ const CarouselText = () => {
       <Carousel />
       <div className="xl:max-w-[60%] max-w-[90%] my-auto">
         <h1 className="text-4xl leading-normal relative">
-          De la învățat mecanic la gândire critică
+        Coursessor Uses Advanced Language Models to Personalize Learning Experience
         </h1>
         <p className="mt-10 font-light w-[90%] leading-relaxed text-sm">
-          Săptămâna aceasta vă voi vorbi despre modul în care educația a evoluat
-          în zilele noastre, de la o activitate menită să restrângă gândirea
-          critică și imaginația elevilor, la activitatea complexă din zilele
-          noastre.
+
+        Coursessor uses advanced machine learning models called Large Language Models (LLMs) to analyze each student's learning style and progress, and recommend personalized learning materials such as articles, videos, quizzes, and simulations. As students progress, the LLM-based system adapts to their performance, providing real-time feedback and recommendations to help them achieve their learning goals faster and more efficiently.
         </p>
         <div className="flex">
           <Arrow

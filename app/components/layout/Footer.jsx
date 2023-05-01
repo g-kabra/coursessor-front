@@ -13,6 +13,7 @@ const Footer = () => {
           <Link href="">Home</Link>
           <Link href="">Research</Link>
           <Link href="">About</Link>
+          <Link href="">Privacy Policy</Link>
         </div>
       </div>
       <hr className="max-md:hidden border-[#2F2F2F]"/>
@@ -20,27 +21,27 @@ const Footer = () => {
         <p className="text-sm font-light">All Rights Reserved</p>
         <hr className="md:hidden border-[#2F2F2F] w-[90vw]"/>
         <div className="flex gap-3">
-          <div className="rounded-[50%] bg-[#6CE9BC1a]">
+          <Link href={"#"}><div className="rounded-[50%] bg-[#6CE9BC1a]">
             <img
               src={"/images/twitterLogo.svg"}
               alt=""
               className="h-[20px] w-[20px] m-[10px]"
             />
-          </div>
-          <div className="rounded-[50%] bg-[#6CE9BC1a]">
+          </div></Link>
+          <Link href={"#"}><div className="rounded-[50%] bg-[#6CE9BC1a]">
             <img
               src={"/images/instaLogo.svg"}
               alt=""
               className="h-[20px] w-[20px] m-[10px]"
             />
-          </div>
-          <div className="rounded-[50%] bg-[#6CE9BC1a]">
+          </div></Link>
+          <Link href={""}><div className="rounded-[50%] bg-[#6CE9BC1a]">
             <img
               src={"/images/youtubeLogo.svg"}
               alt=""
               className="h-[20px] w-[20px] m-[10px]"
             />
-          </div>
+          </div></Link>
         </div>
       </div>
     </div>

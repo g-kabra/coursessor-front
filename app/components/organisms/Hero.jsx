@@ -12,12 +12,12 @@ const Hero = () => {
             height={100}
             className="absolute top-[-100%] left-[-10%] max-lg:hidden"
           />
-          Transforming work and creativity{" "}
+          Transforming education{" "}
           <span className="text-[#6CE9BC]">with AI</span>
         </div>
         <p className="mt-10 md:max-w-[60%] max-w-[90%] leading-normal text-md lg:text-lg font-light max-md:mr-auto">
-          Be specific with your request. We research generative models and how
-          to align them with human values.
+
+        Coursessor uses LLMs to personalize learning by analyzing a student's writing, providing customized feedback, and recommending personalized learning resources.
         </p>
         <button className="mt-10 border-[0.5px] text-xl font-light rounded-xl text-[#6CE9BC] border-[#6CE9BC] hover:bg-[#6CE9BC] hover:text-white transition-all py-4 px-8 max-md:mr-auto">
           Get Started

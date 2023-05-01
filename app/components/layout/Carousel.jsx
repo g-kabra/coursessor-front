@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Carousel = () => {
   const images = [
-    "/images/sampleImage2.jpg",
-    "/images/sampleImage2.jpg",
-    "/images/sampleImage2.jpg",
+    "https://coursessor.imgix.net/ai-cloud-concept-with-robot-head.jpg?auto=format",
+    "https://coursessor.imgix.net/creative-cloud-concept-glass-cube-cloudscape-digital-metaverse-infrastructure.jpg?auto=format",
+    "https://coursessor.imgix.net/line-brain-background-is-circuit-board-abstract-dot-point-connect-with-gradient-line-aesthetic-intricate-wave-line-design-aigenerated.jpg?auto=format",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselInfiniteScroll = () => {

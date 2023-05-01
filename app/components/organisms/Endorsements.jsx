@@ -19,7 +19,7 @@ function Endorsements() {
         <img src="/images/endorsement.png" alt="" />
         <img src="/images/endorsement.png" alt="" />
       </div>
-      <video src="/videos/sampleVideo.mp4" autoPlay={true} loop={true} muted className="w-[80%] overflow-hidden mx-auto my-10 cover outline outline-[#6CE9BC]" />
+      <video src="/videos/BB_c8ce2924-399f-4115-b240-70a78d6c4932.mp4" autoPlay={true} loop={true} muted className="w-[80%] overflow-hidden mx-auto my-10 cover outline outline-[#6CE9BC]" />
     </div>
   );
 }

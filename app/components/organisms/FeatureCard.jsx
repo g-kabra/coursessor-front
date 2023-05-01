@@ -8,7 +8,7 @@ function FeatureCard() {
       <div className="rounded-[50%] overflow-hidden w-[20%] sm:w-[10%] lg:w-[20%] bg-[#6CE9BC1a] flex items-center justify-center aspect-square">
         <img src="/images/checkmark.svg" alt="" className="h-[50%] w-[50%]"/>
       </div>
-      <h1 className="text-4xl mt-8 font-[Sans]">Subheading</h1>
+      <h1 className="text-4xl mt-8 font-satoshi">Subheading</h1>
       <p className="font-light mt-8 leading-loose text-sm">
         Coursessor is an ed-tech company that connects teachers and learners and
         offers the latest AI tech applied in education.
