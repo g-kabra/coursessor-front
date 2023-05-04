@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function Endorsements() {
   return (
@@ -13,11 +14,21 @@ function Endorsements() {
         achieve their goals.
       </p>
       <div className="min-w-screen flex gap-20 mx-auto mt-10 justify-center">
-        <img src="/images/endorsement.png" alt="endorsement" />
-        <img src="/images/endorsement.png" alt="endorsement" />
-        <img src="/images/endorsement.png" alt="endorsement" />
-        <img src="/images/endorsement.png" alt="endorsement" />
-        <img src="/images/endorsement.png" alt="endorsement" />
+        <div className="relative">
+          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        </div>
+        <div className="relative">
+          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        </div>
+        <div className="relative">
+          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        </div>
+        <div className="relative">
+          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        </div>
+        <div className="relative">
+          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        </div>
       </div>
       <video src="/videos/BB_c8ce2924-399f-4115-b240-70a78d6c4932.mp4" autoPlay={true} loop={true} muted className="w-[80%] overflow-hidden mx-auto my-10 cover outline outline-[#6CE9BC]" />
     </div>

@@ -3,7 +3,7 @@ import BlogDisplay from "../atoms/BlogDisplay";
 
 const BlogList = (props) => {
   return (
-    <div className={`grid gap-5 md:mt-20 ${props.className}`}>
+    <div className={`grid gap-10 md:mt-20 ${props.className}`}>
       {props.data.map((e, ind) => {
         return (
           <BlogDisplay
@@ -12,7 +12,7 @@ const BlogList = (props) => {
             content={e.content}
             linkText={e.linkText}
             className=""
-            k={ind}
+            key={ind}
           />
         );
       })}

@@ -12,6 +12,7 @@ const Hero = (props) => {
               width={100}
               height={100}
               className="absolute top-[-100%] left-[-10%] max-lg:hidden"
+              alt=""
             />
             Transforming work and creativity
             <span className="text-[#6CE9BC]"> with AI</span>
@@ -24,6 +25,7 @@ const Hero = (props) => {
               width={100}
               height={100}
               className="absolute top-[-100%] left-[-10%] max-lg:hidden"
+              alt=""
             />
             Searching for “
             <span className="text-[#6CE9BC]">{props.search}</span>”

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ChatBox = (props) => {
@@ -9,19 +10,11 @@ const ChatBox = (props) => {
           placeholder="Type Message"
           className="grow max-sm:max-w-[80%] bg-transparent appearance-none border-0 text-sm"
         />
-        <button>
-          <img
-            src="/images/uploadPicture.svg"
-            alt=""
-            className="h-[20px] min-w-[20px]"
-          />
+        <button className="h-[20px] min-w-[20px] relative">
+          <Image src="/images/uploadPicture.svg" alt="" fill />
         </button>
-        <button>
-          <img
-            src="/images/uploadPicture.svg"
-            alt=""
-            className="h-[20px] min-w-[20px]"
-          />
+        <button className="h-[20px] min-w-[20px] relative">
+          <Image src="/images/uploadPicture.svg" alt="" fill />
         </button>
       </div>
       {props.action && (

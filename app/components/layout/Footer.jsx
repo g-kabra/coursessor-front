@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -16,32 +17,47 @@ const Footer = () => {
           <Link href="">Privacy Policy</Link>
         </div>
       </div>
-      <hr className="max-md:hidden border-[#2F2F2F]"/>
+      <hr className="max-md:hidden border-[#2F2F2F]" />
       <div className="flex justify-between max-md:flex-col-reverse gap-10 max-md:text-center max-md:items-center max-md:mt-5">
         <p className="text-sm font-light">All Rights Reserved</p>
-        <hr className="md:hidden border-[#2F2F2F] w-[90vw]"/>
+        <hr className="md:hidden border-[#2F2F2F] w-[90vw]" />
         <div className="flex gap-3">
-          <Link href={"#"}><div className="rounded-[50%] bg-[#6CE9BC1a]">
-            <img
-              src={"/images/twitterLogo.svg"}
-              alt=""
-              className="h-[20px] w-[20px] m-[10px]"
-            />
-          </div></Link>
-          <Link href={"#"}><div className="rounded-[50%] bg-[#6CE9BC1a]">
-            <img
-              src={"/images/instaLogo.svg"}
-              alt=""
-              className="h-[20px] w-[20px] m-[10px]"
-            />
-          </div></Link>
-          <Link href={""}><div className="rounded-[50%] bg-[#6CE9BC1a]">
-            <img
-              src={"/images/youtubeLogo.svg"}
-              alt=""
-              className="h-[20px] w-[20px] m-[10px]"
-            />
-          </div></Link>
+          <Link href={"#"}>
+            <div className="rounded-[50%] p-[10px] bg-[#6CE9BC1a]">
+              <div className="h-[20px] w-[20px] relative">
+                <Image
+                  src={"/images/twitterLogo.svg"}
+                  alt=""
+                  className=""
+                  fill
+                />
+              </div>
+            </div>
+          </Link>
+          <Link href={"#"}>
+            <div className="rounded-[50%] p-[10px] bg-[#6CE9BC1a]">
+              <div className="h-[20px] w-[20px] relative">
+                <Image
+                  src={"/images/instaLogo.svg"}
+                  alt=""
+                  className=""
+                  fill
+                />
+              </div>
+            </div>
+          </Link>
+          <Link href={""}>
+            <div className="rounded-[50%] p-[10px] bg-[#6CE9BC1a]">
+              <div className="h-[20px] w-[20px] relative">
+                <Image
+                  src={"/images/youtubeLogo.svg"}
+                  alt=""
+                  className=""
+                  fill
+                />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
