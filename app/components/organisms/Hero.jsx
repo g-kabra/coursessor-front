@@ -11,6 +11,7 @@ const Hero = () => {
             width={100}
             height={100}
             className="absolute top-[-100%] left-[-10%] max-lg:hidden"
+            alt="background"
           />
           Transforming education{" "}
           <span className="text-[#6CE9BC]">with AI</span>
@@ -27,6 +28,7 @@ const Hero = () => {
         width={28.65}
         height={45.92}
         className={`absolute mt-20 right-0 left-0 mx-auto bottom-32 mt-20 z-[2] hidden md:block`}
+        alt="mouseScroll"
       />
       </div>
     </>

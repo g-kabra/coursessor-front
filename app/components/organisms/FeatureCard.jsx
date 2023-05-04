@@ -6,7 +6,7 @@ function FeatureCard() {
   return (
     <Card>
       <div className="rounded-[50%] overflow-hidden w-[20%] sm:w-[10%] lg:w-[20%] bg-[#6CE9BC1a] flex items-center justify-center aspect-square">
-        <img src="/images/checkmark.svg" alt="" className="h-[50%] w-[50%]"/>
+        <img src="/images/checkmark.svg" alt="checkmark" className="h-[50%] w-[50%]"/>
       </div>
       <h1 className="text-4xl mt-8 font-satoshi">Subheading</h1>
       <p className="font-light mt-8 leading-loose text-sm">

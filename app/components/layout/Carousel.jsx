@@ -29,14 +29,14 @@ const Carousel = () => {
               style={{ transform: `translate(-${currentIndex * 100}%)` }}
               className="w-full h-full transition-all duration-500 grow shrink-0"
               key={index}
-              alt="Sample Image"
+              alt="Carousel Image"
             />
           );
         })}
       </div>
       <div className="flex gap-8 mt-4">
         {images.map((e, index) => {
-          return <div onClick={() => {setCurrentIndex(index)}} className={`${currentIndex === index ? "bg-[#6CE9BC] outline outline outline-[#6CE9BC] outline-offset-[10px] " : "bg-[gray] "} h-[5px] w-[5px] rounded-[50%]`}></div>
+          return <div key={index} onClick={() => {setCurrentIndex(index)}} className={`${currentIndex === index ? "bg-[#6CE9BC] outline outline outline-[#6CE9BC] outline-offset-[10px] " : "bg-[gray] "} h-[5px] w-[5px] rounded-[50%]`}></div>
         })}
       </div>
     </div>
