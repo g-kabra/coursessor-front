@@ -40,5 +40,6 @@ module.exports = nextConfig
 module.exports = {
   images: {
     domains: ['cdn-images.coursessor.com', 'cdn-videos.coursessor.com', 'coursessor.imgix.net'],
+	unoptimized: true,
   },
 }
