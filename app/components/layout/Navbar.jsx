@@ -59,7 +59,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div className="h-[10%] text-white w-full z-[5] fixed top-0 before:content-[''] before:h-full before:w-full before:backdrop-blur before:blur-[1px] before:block before:absolute before:-z-[1]">
+    <div className="h-[10vh] text-white w-full z-[5] fixed top-0 before:content-[''] before:h-full before:w-full before:backdrop-blur before:blur-[1px] before:block before:absolute before:-z-[1]">
       <div className="w-[90%] h-full items-center flex justify-between m-auto">
         <Link href="">
           <p className="relative text-xl font-medium z-[10]">Coursessor</p>

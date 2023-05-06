@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Endorsements() {
   return (
-    <div className="flex flex-col text-left w-[90%] mt-40 mx-auto overflow-x-hidden">
+    <div className="flex flex-col text-left w-[90%] mt-40 mx-auto overflow-hidden">
       <h1 className="text-5xl leading-normal relative lg:text-center">
         This is some heading
       </h1>
@@ -13,21 +13,21 @@ function Endorsements() {
         Generative models and custom deep learning models to help students
         achieve their goals.
       </p>
-      <div className="min-w-screen flex gap-20 mx-auto mt-10 justify-center">
-        <div className="relative">
-          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+      <div className="md:w-[80%] overflow-auto mx-auto flex lg:gap-20 gap-5 mt-10 items-center h-[10vh]">
+        <div className="relative h-full basis-0 grow max-md:w-[10rem]">
+          <Image src="/images/endorsement.png" alt="endorsement" fill style={{objectFit:"contain"}}/>
         </div>
-        <div className="relative">
-          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        <div className="relative h-full basis-0 grow max-md:w-[10rem]">
+          <Image src="/images/endorsement.png" alt="endorsement" fill style={{objectFit:"contain"}}/>
         </div>
-        <div className="relative">
-          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        <div className="relative h-full basis-0 grow max-md:w-[10rem]">
+          <Image src="/images/endorsement.png" alt="endorsement" fill style={{objectFit:"contain"}}/>
         </div>
-        <div className="relative">
-          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        <div className="relative h-full basis-0 grow max-md:w-[10rem]">
+          <Image src="/images/endorsement.png" alt="endorsement" fill style={{objectFit:"contain"}}/>
         </div>
-        <div className="relative">
-          <Image src="/images/endorsement.png" alt="endorsement" fill/>
+        <div className="relative h-full basis-0 grow max-md:w-[10rem]">
+          <Image src="/images/endorsement.png" alt="endorsement" fill style={{objectFit:"contain"}}/>
         </div>
       </div>
       <video src="https://coursessor.s3.eu-central-1.amazonaws.com/BB_c8ce2924-399f-4115-b240-70a78d6c4932.mp4" autoPlay={true} loop={true} muted className="w-[80%] overflow-hidden mx-auto my-10 cover outline outline-[#6CE9BC]" />

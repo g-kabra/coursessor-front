@@ -8,7 +8,7 @@ const BlogDisplay = (props) => {
       className={`flex flex-col text-left ${props.className} max-md:mt-10 w-full`}
     >
       <div className="flex md:flex-col gap-4 items-center w-full">
-        <div className="w-[30%] md:w-full object-cover aspect-square outline outline-1 outline-[#6CE9BC] relative">
+        <div className="w-[30%] md:w-full object-cover aspect-[4/3] ring-1 ring-[#6CE9BC] relative">
           <Image
             src={props.imageLink}
             alt=""

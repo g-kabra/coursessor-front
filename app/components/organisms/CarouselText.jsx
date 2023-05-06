@@ -4,7 +4,7 @@ import Arrow from "../atoms/ArrowLink";
 
 const CarouselText = () => {
   return (
-    <div className="m-10 grid md:grid-cols-2 grid-cols-1 gap-20 min-h-min">
+    <div className="lg:m-10 m-5 my-10 grid md:grid-cols-2 grid-cols-1 gap-20 min-h-min">
       <Carousel />
       <div className="xl:max-w-[60%] max-w-[90%] my-auto">
         <h1 className="text-4xl leading-normal relative">

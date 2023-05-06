@@ -18,6 +18,10 @@ app.prepare().then(() => {
   // Add custom middleware to set cache headers
   server.use(middleware);
 
+  server.get("/ro/blog", (req, res) => {
+    res.redirect("/")
+  })
+
   // Catch-all route for Next.js requests
   server.all('*', (req, res) => {
     return handle(req, res);

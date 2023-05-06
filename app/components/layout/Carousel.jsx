@@ -20,11 +20,14 @@ const Carousel = () => {
     return () => clearInterval(interval);
   });
   return (
-    <div className="flex xl:h-full xl:max-w-[70%] w-full ml-auto my-auto  flex-col gap-4 items-center justify-center">
-      <div className="relative flex-nowrap flex h-full w-full overflow-hidden outline outline-2 outline-[#6CE9BC]">
+    <div className="flex xl:h-full xl:max-w-[70%] w-full ml-auto my-auto flex-col gap-4 items-center justify-center">
+      <div className="relative flex-nowrap flex h-full w-full overflow-hidden ring-2 ring-[#6CE9BC]">
         {images.map((e, index) => {
           return (
-            <div className="relative w-full h-full  grow shrink-0" key={index}>
+            <div
+              className="relative w-full h-full aspect-[4/3] grow shrink-0"
+              key={index}
+            >
               <Image
                 src={e}
                 style={{ transform: `translate(-${currentIndex * 100}%)` }}
@@ -36,7 +39,7 @@ const Carousel = () => {
           );
         })}
       </div>
-      <div className="flex gap-8 mt-4">
+      <div className="flex gap-5 mt-4">
         {images.map((e, index) => {
           return (
             <div
@@ -45,11 +48,15 @@ const Carousel = () => {
                 setCurrentIndex(index);
               }}
               className={`${
-                currentIndex === index
-                  ? "bg-[#6CE9BC] outline outline outline-[#6CE9BC] outline-offset-[10px] "
-                  : "bg-[gray] "
-              } h-[5px] w-[5px] rounded-[50%]`}
-            ></div>
+                currentIndex === index ? "ring-1 ring-[#6CE9BC]" : ""
+              } rounded-[50%]`}
+            >
+              <div
+                className={`${
+                  currentIndex === index ? "bg-[#6CE9BC]" : "bg-[gray] "
+                } h-[5px] w-[5px] rounded-[50%] m-[10px]`}
+              />
+            </div>
           );
         })}
       </div>
